@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="网络技术,经验教程,">
+  <meta name="keywords" content="经验教程,网络技术,">
 
 
 
@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="基于静态博客主流框架hexoGithub新建username.github.io仓库并初始化 username表示Github的账户名，使用该名字创建公有化仓库；  电脑端安装hexo及其依赖项Windows  下载并安装Git；  在站点下载Node.js下载并安装；  打开Git bash，使用npm安装hexo，输入$ npm install -g hexo-cli；   Linux 新建本">
-<meta name="keywords" content="网络技术,经验教程">
+<meta name="keywords" content="经验教程,网络技术">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于github的建站经验">
 <meta property="og:url" content="http://yoursite.com/2019/07/25/20190725-基于github的建站经验/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
 <meta property="og:description" content="基于静态博客主流框架hexoGithub新建username.github.io仓库并初始化 username表示Github的账户名，使用该名字创建公有化仓库；  电脑端安装hexo及其依赖项Windows  下载并安装Git；  在站点下载Node.js下载并安装；  打开Git bash，使用npm安装hexo，输入$ npm install -g hexo-cli；   Linux 新建本">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-25T09:21:54.613Z">
+<meta property="og:updated_time" content="2019-07-26T01:07:59.815Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于github的建站经验">
 <meta name="twitter:description" content="基于静态博客主流框架hexoGithub新建username.github.io仓库并初始化 username表示Github的账户名，使用该名字创建公有化仓库；  电脑端安装hexo及其依赖项Windows  下载并安装Git；  在站点下载Node.js下载并安装；  打开Git bash，使用npm安装hexo，输入$ npm install -g hexo-cli；   Linux 新建本">
@@ -408,10 +408,20 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line"># in theme directory(source/images): /images/avatar.gif</span><br><span class="line"># in site  directory(source/uploads): /uploads/avatar.gif</span><br><span class="line">avatar: /images/avatar.jpg</span><br></pre></td></tr></table></figure>
 
 
+</li>
+</ul>
+<ol start="3">
+<li><p><strong>内容设置</strong></p>
+<p>为分类页面（标签、分类）进行配置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags <span class="comment"># 新建标签页面</span></span><br><span class="line">$ hexo new page catagories <span class="comment"># 新建分类页面</span></span><br></pre></td></tr></table></figure>
+
+<p>在<code>source</code>文件夹下回出现<code>tags</code>和<code>catagories</code>目录，进入修改相应的文件<code>index.md</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2019-07-25 15:11:25</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line"></span><br><span class="line">title: 关于</span><br><span class="line">date: 2019-07-25 16:29:33</span><br><span class="line">type: &quot;about&quot;</span><br></pre></td></tr></table></figure>
+
 
 
 </li>
-</ul>
+</ol>
 <h2 id="加载第三方服务"><a href="#加载第三方服务" class="headerlink" title="加载第三方服务"></a><font size="4">加载第三方服务</font></h2><ol>
 <li>百度统计</li>
 <li>网站分享</li>
@@ -420,12 +430,16 @@
 <h2 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a><font size="4">部署至Github</font></h2><ul>
 <li><p>在站点配置文件中设置部署参数：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br></pre></td></tr></table></figure>
-
-
+</li>
+<li><p>安装hexo-deployer-git：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 
 
 </li>
+</ul>
+<ul>
+<li>一条命令部署到服务器：</li>
 </ul>
 
       
@@ -444,9 +458,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/网络技术/" rel="tag"># 网络技术</a>
-          
             <a href="/tags/经验教程/" rel="tag"># 经验教程</a>
+          
+            <a href="/tags/网络技术/" rel="tag"># 网络技术</a>
           
         </div>
       
@@ -573,7 +587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
