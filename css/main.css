@@ -1828,7 +1828,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d7ecd0;
+  background: #cd6f01;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3150,7 +3150,7 @@ pre .javascript .function {
   }
 }
 body {
-  background: url("/images/background.jpg") no-repeat;
+  background: url("/images/bg.jpg") no-repeat;
 /* 背景图垂直、水平居中 */
   background-position: center center;
 /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
@@ -3165,19 +3165,19 @@ body {
   border-bottom: none;
 }
 .post-body p a:hover {
-  color: #0477ab;
+  color: #ff1493;
   text-decoration: underline;
 }
 code {
-  color: #ff7600 0;
-  background: #fbf7f8;
-  margin: 2px;
+  color: #ffd700;
+  background: #808080;
+  margin: 1px;
 }
 .highlight,
 pre {
-  margin: 5px 0;
-  padding: 5px;
-  border-radius: 3px;
+  margin: 3px 0;
+  padding: 3px;
+  border-radius: 1px;
 }
 .highlight,
 code,
