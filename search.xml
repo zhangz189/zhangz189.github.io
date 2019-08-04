@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[VPS网络中继及加速，linux相关技术]]></title>
+    <url>%2F2019%2F08%2F04%2F20190804-VPS%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%BB%A7%E5%8F%8A%E5%8A%A0%E9%80%9F%EF%BC%8Clinux%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%2F</url>
+    <content type="text"><![CDATA[VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。 1. VPS网络中继及加速&emsp;&emsp;前期工作的关键词，Digitalocean，SSH key，putty， private key &emsp;&emsp;选择aes-256-cfb加密时，使用如下代码。 12345678910111213141516171819202122sudo apt-get update # 更新系统组件sudo apt-get upgrade # 升级系统组件sudo apt-get install python-pip # 安装python-pip安装器，因为shadowsocks是基于python的pip install shadowsocks # 注释掉因为这种内置安装的是2.8版本，不支持更优的aes-256-gcm加密方式 cd /etc# ===== 创建shadowsocks的配置文件 =======sudo touch ss_conf.json # 在/etc文件夹创建shadowsocks配置文件ss_conf.jsonsudo vim ss_conf.json # 编辑配置文件，按i键进入插入模式&#123;"server":"159.89.129.44", # 服务器IP"server_port":8388, # 服务器端口号"local_address":"127.0.0.1", # 本地IP"local_port":1080, # 本地端口号"password":"zz569655423", # 密码"timeout":300, # 延时"method":"aes-256-cfb"&#125;# ======shadowsocks配置文件完毕 ========ssserver -c /etc/ss_conf.json -d start # 启动shadowsocks服务器端服务cd /etcsudo vim rc.local # 修改启动文件，将shadowsocks服务加入到开机启动项# 将'ssserver -c /etc/ss_conf.json -d start' 命令加入到'exit 0'代码之前 &emsp;&emsp;选择使用aes-128/256-gcm的加密方式时，由于需要安装libsodium组件，所以比较繁琐，代码及说明展示如下： 123456789101112131415161718192021222324252627282930313233343536sudo apt-get update # 更新系统组件sudo apt-get upgrade # 升级系统组件sudo apt-get install python-pip # 安装python-pip安装器，因为shadowsocks是基于python的# pip install shadowsocks # 注释掉因为这种内置安装的是2.8版本，不支持更优的aes-256-gcm加密方式 pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U # 从源码直接安装3.0版本# ===== 会提示缺少libsodium组件，需要下载源码安装 =====wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz # 下载libsodium的源码tar zxf LATEST.tar.gz # 解压源码cd libsodium* # 进入解压后的libsodium源码文件夹./configure # 编译libsodium源码sudo make &amp;&amp; sudo make install # 配置及安装源码cd /etc # 进入/etc文件夹sudo vim ld.so.conf # 修改libsodium的配置文件，按i进入插入模式，在该配置文件中加入以下内容/lib/usr/lib64/usr/local/lib # 录入完毕，按esc进入命令模式，使用：wq保存退出sudo ldconfig # 更新lidsodium的配置# ===== libsodium组件安装完成 ==========cd /etc# ===== 创建shadowsocks的配置文件 =======sudo touch ss_conf.json # 在/etc文件夹创建shadowsocks配置文件ss_conf.jsonsudo vim ss_conf.json # 编辑配置文件，按i键进入插入模式&#123;"server":"159.89.129.44", # 服务器IP"server_port":8388, # 服务器端口号"local_address":"127.0.0.1", # 本地IP"local_port":1080, # 本地端口号"password":"zz569655423", # 密码"timeout":300, # 延时"method":"aes-256-cfb" # 加密方式，在此选择aes-128-gcm，不知道能不能防止被封IP，cfb是确定不能逃脱厄运了&#125;# ======shadowsocks配置文件完毕 ========ssserver -c /etc/ss_conf.json -d start # 启动shadowsocks服务器端服务cd /etcsudo vim rc.local # 修改启动文件，将shadowsocks服务加入到开机启动项# 将'ssserver -c /etc/ss_conf.json -d start' 命令加入到'exit 0'代码之前 &emsp;&emsp;使用锐速加速，一般需要更换内核并安装锐速，比较复杂，所幸有牛人制作了一键安装脚本，亲测在ubuntu16.04上可用。 12wget xiaofd.github.io/ruisu.sh &amp;&amp; bash ruisu.sh # 下载锐速软件和系统内核包并运行ps aux | grep appex # 查看安装锐速是否运行 2. Latex + Vim + Tikz]]></content>
+      <categories>
+        <category>计算机</category>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>VPS</tag>
+        <tag>网络技术</tag>
+        <tag>经验教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[读书笔记之《沧浪之水》]]></title>
+    <url>%2F2019%2F08%2F03%2F20190803-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B9%8B%E3%80%8A%E6%B2%A7%E6%B5%AA%E4%B9%8B%E6%B0%B4%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[内容梗概&emsp;&emsp;沧浪之水是一部描写官场文化、阐述为官之道、揭露社会生存法则的一本小说，书中讲述了一个生长于农村的青年池大为，从大学时代的求学历程，到进入省卫生厅为官的起伏历程和心理变化。 &emsp;&emsp;父亲本是城里有名望的医生，因在文革中正义直言而遭迫害，来到小山村成为了一名赤脚医生，一生再没有能够回到城里。父亲的正直善良在池大为心中种下了善的种子，父亲留下的一册《历代名人图鉴》，也承载了这个家庭对于人生原则和公平正义的诚挚守护。 &emsp;&emsp;一辈子在乡村行医，终于盼到了儿子考上北京的大学，然而在录取通知书来到的那天，这位父亲却突发疾病离开了人世。池大为带着父亲的精神和嘱托，远赴他乡求学，开始了自己丰富而又无奈的新生活。研究生毕业后，由于不肯妥协，和挚爱的女友分手，也错失留在北京的机会，只得到省里的中医研究院去任职。好在省卫生厅马厅长认为他是研究生毕业，较为看好，所以留了他在卫生厅发展。 &emsp;&emsp;一入官场深似海，最初带给池大为冲击的还只是同一个办公室的同事丁小槐，这个丁小槐阿谀逢迎，极尽谄媚之技，为了自己的利益与周围人勾心斗角。然后渐渐的，厅里巨额无度的开支，庶民因病走投无路的自杀，太多的人和事带给了池大为更深刻的冲击，内心的刚正和善良告诉他不能屈从于这样的环境，他选择了在民主生活会上想马厅长和同志们直言心中的不满，但是得到的不是同志们的理解和支持，而是异口同声的批评和指责，甚至失去了在厅里核心部门的职位，调到清水衙门中医协会，冷板凳一坐就是十多年。 &emsp;&emsp;仕途的失败和对原则的追求，池大为毫不犹豫的选择的后者，他似乎愿意一辈子清贫，也要保持那份心安。生活是残酷的，他可以不在乎别人的冷落轻视和经济上的拮据，但当他结婚后妻子都没法买一件好点的衣服，当妻子即将临产还要挤着公交车到很远的医院上班而无法调动，当孩子出生却仍然只能住在单人宿舍，当丁小槐都蹭蹭蹭地爬到了副处，当儿子烫伤急救却拿不出钱时还要求丁小槐的一个电话，当儿子进不了省机关幼儿园还需要暴发户妹夫的运作，他再也不可能不在乎了。 &emsp;&emsp;池大为知道自己必须改变了，这个社会就是弱肉强食，全靠运作，自己对公平正义的执念崩塌了。从妻子高超的打针技术救了马厅长的孙女为突破，池大为一步一步的改变了自己，他学会了说假话，学会了看脸色，学会了两面三刀，更重要的是学会了野心，他开始享受那种“被觉得很重要”的感觉，而这种感觉是通过什么手段才得到的，他已经不关心了。有了厅长的提携，再加上行政和业务两手抓，池大为进步飞快，科长、副处、处长、副厅、正厅，一路而来，似乎什么都有了，不可避免地也有了小三，有了对金钱的渴望。 &emsp;&emsp;池大为刚进卫生厅的时候，那些看不惯的人和事，到如今，对他来说已经是理所当然了，甚至已经成了他必须捍卫的东西。当新的年轻人和他当年一样锋芒毕露时，他也和当时的马厅长一样，将他调离，让他经历自己曾经遭受的一切。最后，作为家乡的典范荣归故里，在父亲墓前，他烧了那本《历代名人图鉴》，他明白屈原李白这等洁身自好之人，千年才有一两个，更多的人被残酷的现实压迫的支离破碎，淹没在历史长河里。他说即使不得已要去遵守官场的规则，他也是农村的孩子，会有平民意识，只是一旦身处其位，或许也只能是身不由己。 读后感悟&emsp;&emsp;我自己断然不会主动去读官场小说，在朋友的再三推荐下才勉强翻开来看。我一直觉得读书就是融入到主人公的生活，跟他去经历一场人生，因此书中最初描写的那些官场丑态和人性险恶，让我焦躁难安，实在难以继续读下去。几次搁置，这次终于读完。 &emsp;&emsp;书中的描写周详细腻，不仅描绘了官场的等级观念和明争暗斗，还生动传神地刻画了主人公丰富的思想活动和心理斗争历程，将官场规则和铁律用一个个鲜活的事例展现在我们面前。虽然文学作品会有突出和强烈对比的手法，但是不得不承认作品所述就是这个社会真正的面貌，很多刚毕业的年轻人都是不怕虎的初生牛犊，以天下为己任，丝毫不肯放下心中的信仰和高洁，结果被现实撞得头破血流，然后才开始领悟到这个社会的游戏规则，最终也不得不变得圆滑势力，成为当初的自己最讨厌的那种人。 &emsp;&emsp;我知道，书中描述的那个社会和官场文化没错，主人公没错，那些小人没错，领导们更没错，因为这就是现实，无论对错。刘慈欣在《时间移民》中描述了一个镜像世界，通过超弦计算机可以精确的模拟地球的演化，从而可以看到在任何时间任何地点发生的任何事情，在这样一个世界中，善良绝对的压制邪恶，人类社会本应进化成为一种理想化的状态，但是它却出人意料的衰亡了。这很好理解，当一个社会完全没有了个人的欲望，那么他也就失去了进化的动力，失去了多彩的文明。有时候我们咒骂着可恶的社会，不屑于迎合这不公的规则，但是不得不承认这就是历史走出来的路，我们是没有选择的。 &emsp;&emsp;不得不承认，现在的我仍然是内心过于高贵的人，看到了太多，也经历了太多形式化、虚荣化的东西，憋着一口闷气无法纾解。但是一句“以后坚决不做行政”就能让自己摆脱吗，或许只是痴人说梦。有些规则是官场的，但也同样适用于整个社会，自己孑然一身时还有能力去逃避，但是当你被背负着父母的期盼、家庭的责任时，自己所坚持的一些原则便荡然无存，只得融入于社会规则，放下心中的高贵。 &emsp;&emsp;身处社会规则之中，最初的隐忍和伪装，终究会慢慢蚕食心中本原的善念，很多人都变成了彻头彻尾的利己主义者，却浑然不知。书中的池大为是这样，他的妻子更是这样，他们是如何从最为虔诚的社会公正守护者变成最后的样子的呢。生活的碰壁，现实的冲击，这些诚然是充分的理由，也是我们每一个人都不能免俗的地方，好在他们终究还是有一点点底线的。只是我想，也有人能够在大环境中游刃有余，而且也可以做到与人为善，而这或许就是艺术所在吧。]]></content>
+      <categories>
+        <category>读书笔记</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>生活随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[多元自适应回归样条方法MARS及其应用]]></title>
     <url>%2F2019%2F07%2F26%2F20190726-%E5%A4%9A%E5%85%83%E8%87%AA%E9%80%82%E5%BA%94%E5%9B%9E%E5%BD%92%E6%A0%B7%E6%9D%A1%E6%96%B9%E6%B3%95MARS%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%2F</url>
     <content type="text"><![CDATA[文献阅读综述[1] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10. Goh等基于484组液化侧移数据，利用多元自适应回归样条(MARS)建立了地震液化侧移的预测模型。MARS是一种非参数化的非线性算法，它对数据采用分而治之的分析策略，将样本数据分割为不同梯度的线性分段（样条），然后采用逐步搜索的方法得到整个分段曲线的基函数。 最终基于二阶相关性的MARS模型，对自由面场地和缓坡场地分别得到了17个基函数的线性样条函数和18个基函数的线性样条函数。将计算结果的R2值、均方差值 (RMSE) 和相对误差进行比较，发现MARS模型的预测比传统的MLR方法更加准确。文中还进行了参数的敏感性分析，认为自由面场地的两个最重要因素分别是log(W)（自由面坡度对数值）和震中距，而缓坡场地的两个最重要因素分别是震级和震中距。 总体来说，MARS方法相比传统的MLR方法在预测液化侧移时准确性更高，并且能够给出参数的相对重要性，计算效率也较高，在地震液化侧移的预测领域具有较好的发展前景。 基本原理Friedman (1991) 首次提出将多元自适应回归样条 (MARS) 作为一种拟合输入变量及其依赖变量之间复杂关系的统计分析方法。该方法将 程序解析与应用]]></content>
       <categories>
         <category>科研</category>
-        <category>算法</category>
       </categories>
       <tags>
         <tag>机器学习</tag>
@@ -33,8 +58,8 @@
         <category>网络</category>
       </categories>
       <tags>
-        <tag>经验教程</tag>
         <tag>网络技术</tag>
+        <tag>经验教程</tag>
       </tags>
   </entry>
 </search>
