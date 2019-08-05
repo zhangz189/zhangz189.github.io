@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。 1. VPS网络中继及加速&amp;emsp;&amp;emsp;前期工作的关键词，Digitalocean，SSH key，putty， private key &amp;emsp;&amp;emsp;选择aes-256-cfb加密时，使用如下代码。 12345678910111213141516171">
+<meta name="description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。">
 <meta name="keywords" content="VPS,网络技术,经验教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VPS网络中继及加速，linux相关技术">
 <meta property="og:url" content="http://yoursite.com/2019/08/04/20190804-VPS网络中继及加速，linux相关技术/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
-<meta property="og:description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。 1. VPS网络中继及加速&amp;emsp;&amp;emsp;前期工作的关键词，Digitalocean，SSH key，putty， private key &amp;emsp;&amp;emsp;选择aes-256-cfb加密时，使用如下代码。 12345678910111213141516171">
+<meta property="og:description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-04T01:37:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS网络中继及加速，linux相关技术">
-<meta name="twitter:description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。 1. VPS网络中继及加速&amp;emsp;&amp;emsp;前期工作的关键词，Digitalocean，SSH key，putty， private key &amp;emsp;&amp;emsp;选择aes-256-cfb加密时，使用如下代码。 12345678910111213141516171">
+<meta name="twitter:description" content="VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。">
 
 
 
@@ -444,16 +444,14 @@
 
       
         <p>VPS作为虚拟个人主机，在建站、网络代理等方面具有重要作用。以下简单介绍利用VPS搭建个人代理服务器的步骤和经验，以资参考。</p>
+<a id="more"></a>
 <h2 id="1-VPS网络中继及加速"><a href="#1-VPS网络中继及加速" class="headerlink" title="1. VPS网络中继及加速"></a><font size="5">1. VPS网络中继及加速</font></h2><p>&emsp;&emsp;前期工作的关键词，Digitalocean，SSH key，putty， private key</p>
 <p>&emsp;&emsp;选择aes-256-cfb加密时，使用如下代码。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update # 更新系统组件</span><br><span class="line">sudo apt-get upgrade # 升级系统组件</span><br><span class="line">sudo apt-get install python-pip # 安装python-pip安装器，因为shadowsocks是基于python的</span><br><span class="line">pip install shadowsocks # 注释掉因为这种内置安装的是2.8版本，不支持更优的aes-256-gcm加密方式 </span><br><span class="line">cd /etc</span><br><span class="line"><span class="meta">#</span> ===== 创建shadowsocks的配置文件 =======</span><br><span class="line">sudo touch ss_conf.json # 在/etc文件夹创建shadowsocks配置文件ss_conf.json</span><br><span class="line">sudo vim ss_conf.json # 编辑配置文件，按i键进入插入模式</span><br><span class="line">&#123;</span><br><span class="line">"server":"159.89.129.44", # 服务器IP</span><br><span class="line">"server_port":8388, # 服务器端口号</span><br><span class="line">"local_address":"127.0.0.1", # 本地IP</span><br><span class="line">"local_port":1080, # 本地端口号</span><br><span class="line">"password":"zz569655423", # 密码</span><br><span class="line">"timeout":300, # 延时</span><br><span class="line">"method":"aes-256-cfb"</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span> ======shadowsocks配置文件完毕 ========</span><br><span class="line">ssserver -c /etc/ss_conf.json -d start # 启动shadowsocks服务器端服务</span><br><span class="line">cd /etc</span><br><span class="line">sudo vim rc.local # 修改启动文件，将shadowsocks服务加入到开机启动项</span><br><span class="line"><span class="meta">#</span> 将'ssserver -c /etc/ss_conf.json -d start' 命令加入到'exit 0'代码之前</span><br></pre></td></tr></table></figure>
-
 <p>&emsp;&emsp;选择使用aes-128/256-gcm的加密方式时，由于需要安装libsodium组件，所以比较繁琐，代码及说明展示如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update # 更新系统组件</span><br><span class="line">sudo apt-get upgrade # 升级系统组件</span><br><span class="line">sudo apt-get install python-pip # 安装python-pip安装器，因为shadowsocks是基于python的</span><br><span class="line"><span class="meta">#</span> pip install shadowsocks # 注释掉因为这种内置安装的是2.8版本，不支持更优的aes-256-gcm加密方式 </span><br><span class="line">pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip -U # 从源码直接安装3.0版本</span><br><span class="line"><span class="meta">#</span> ===== 会提示缺少libsodium组件，需要下载源码安装 =====</span><br><span class="line">wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz # 下载libsodium的源码</span><br><span class="line">tar zxf LATEST.tar.gz # 解压源码</span><br><span class="line">cd libsodium* # 进入解压后的libsodium源码文件夹</span><br><span class="line">./configure # 编译libsodium源码</span><br><span class="line">sudo make &amp;&amp; sudo make install # 配置及安装源码</span><br><span class="line">cd /etc # 进入/etc文件夹</span><br><span class="line">sudo vim ld.so.conf # 修改libsodium的配置文件，按i进入插入模式，在该配置文件中加入以下内容</span><br><span class="line">/lib</span><br><span class="line">/usr/lib64</span><br><span class="line">/usr/local/lib # 录入完毕，按esc进入命令模式，使用：wq保存退出</span><br><span class="line">sudo ldconfig # 更新lidsodium的配置</span><br><span class="line"><span class="meta">#</span> ===== libsodium组件安装完成 ==========</span><br><span class="line">cd /etc</span><br><span class="line"><span class="meta">#</span> ===== 创建shadowsocks的配置文件 =======</span><br><span class="line">sudo touch ss_conf.json # 在/etc文件夹创建shadowsocks配置文件ss_conf.json</span><br><span class="line">sudo vim ss_conf.json # 编辑配置文件，按i键进入插入模式</span><br><span class="line">&#123;</span><br><span class="line">"server":"159.89.129.44", # 服务器IP</span><br><span class="line">"server_port":8388, # 服务器端口号</span><br><span class="line">"local_address":"127.0.0.1", # 本地IP</span><br><span class="line">"local_port":1080, # 本地端口号</span><br><span class="line">"password":"zz569655423", # 密码</span><br><span class="line">"timeout":300, # 延时</span><br><span class="line">"method":"aes-256-cfb" # 加密方式，在此选择aes-128-gcm，不知道能不能防止被封IP，cfb是确定不能逃脱厄运了</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#</span> ======shadowsocks配置文件完毕 ========</span><br><span class="line">ssserver -c /etc/ss_conf.json -d start # 启动shadowsocks服务器端服务</span><br><span class="line">cd /etc</span><br><span class="line">sudo vim rc.local # 修改启动文件，将shadowsocks服务加入到开机启动项</span><br><span class="line"><span class="meta">#</span> 将'ssserver -c /etc/ss_conf.json -d start' 命令加入到'exit 0'代码之前</span><br></pre></td></tr></table></figure>
-
 <p>&emsp;&emsp;使用锐速加速，一般需要更换内核并安装锐速，比较复杂，所幸有牛人制作了一键安装脚本，亲测在ubuntu16.04上可用。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget xiaofd.github.io/ruisu.sh &amp;&amp; bash ruisu.sh # 下载锐速软件和系统内核包并运行</span><br><span class="line">ps aux | grep appex # 查看安装锐速是否运行</span><br></pre></td></tr></table></figure>
-
 <h2 id="2-Latex-Vim-Tikz"><a href="#2-Latex-Vim-Tikz" class="headerlink" title="2. Latex + Vim + Tikz"></a><font size="5">2. Latex + Vim + Tikz</font></h2>
       
     </div>
@@ -497,6 +495,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/05/20190805-关于对就业的思考讨论与规划/" rel="prev" title="关于对就业的思考讨论与规划">
+                关于对就业的思考讨论与规划 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -585,7 +587,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -596,7 +598,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -607,7 +609,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
