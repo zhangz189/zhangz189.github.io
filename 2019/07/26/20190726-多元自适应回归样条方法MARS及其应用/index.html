@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta name="description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
 <meta name="keywords" content="机器学习,科研进展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多元自适应回归样条方法MARS及其应用">
 <meta property="og:url" content="http://yoursite.com/2019/07/26/20190726-多元自适应回归样条方法MARS及其应用/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
-<meta property="og:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta property="og:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-02T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多元自适应回归样条方法MARS及其应用">
-<meta name="twitter:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta name="twitter:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
 
 
 
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  948 字
+                  1.4k 字
                 </span>
               
 
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -454,6 +454,7 @@
 
       
         <p>本篇文章主要介绍一种数据拟合的算法<code>MARS</code>，以及其在土木工程领域的应用</p>
+<p>摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用</p>
 <a id="more"></a>
 <h1 id="文献阅读综述-Literatures-Review"><a href="#文献阅读综述-Literatures-Review" class="headerlink" title="文献阅读综述 (Literatures Review)"></a><font face="华文中宋" size="5">文献阅读综述 (Literatures Review)</font></h1><h3 id="1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><a href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67" class="headerlink" title="[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67."></a><font face="Time New Roman" size="4" color="orange">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</font></h3><blockquote>
 </blockquote>
@@ -476,16 +477,26 @@ y=f(X_1,X_2,\cdots,X_n)+e=f(X)+e \tag{1}</script><p>其中 $e$ 是误差项，�
 <li><p><strong>基函数 (Basis Functions)</strong></p>
 <p>由一个上述的分段线性样条函数或者多个样条函数的乘积，可以得到基函数$\lambda_m(X)$，由未知系数 $\beta$ 对基函数进行线性组合，可以得到整个分段样条曲线的拟合方程：</p>
 <script type="math/tex; mode=display">
-f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中未知系数 $\beta$ 通过最小二乘法进行估计得到，$M$ 表示当前组成该拟合方程的基函数的数量。</p>
+f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中<font color="red">未知系数 $\beta$ 通过最小二乘法进行估计</font>得到，$M$ 表示当前组成该拟合方程的基函数的数量。</p>
 </li>
-<li><p><strong>前向选择阶段 (Phase of Forward Selection)</strong></p>
+<li><p><strong>前向选择阶段 (Forward Selection Procedure)</strong></p>
+<p>前向选择阶段由如上四个循环嵌套：</p>
+<p>第一个循环表示分段区间数量每次增加两个；</p>
+<p>第二个循环表示在每一分段区间内选择最优基函数；</p>
+<p>第三个循环表示对 $\lambda_m(X)$ 中未包括的变量 $x_v$ 增加分段；</p>
+<p>第四个循环表示为对应的变量 $x_v$ 寻找最优分段点 $t$ 。</p>
+</li>
+<li><p><strong>反向删减阶段 (Backward Deletion Sequence)</strong></p>
+<p>前向选择阶段包括了数据的不确定因素，得到的往往是过拟合的模型，因此需要在反向删减阶段中去掉无关变量。反向删减阶段逐个地删除无效项后，通过计算比较得到最优模型。模型的计算比较通常采用较省算力的广义交叉验证方法(GCV)。</p>
+<p>对于 $N$ 组数据组成的训练数据集，模型的GCV参数计算公式如下：</p>
+<script type="math/tex; mode=display">
+\mathrm{GCV}=\frac{\frac{1}{N} \sum_{i=1}^{N}\left[y_{i}-f\left(x_{i}\right)\right]^{2}}{\left[1-\frac{M+d \times(M-1) / 2}{N}\right]^{2}}</script><p>其中分子是用模型拟合训练数据时的均方误差，分母是模型复杂程度的惩罚项， $(M - 1)/2$ 代表分段函数的节点数量，$M$ 表示基函数的数量，因此节点和基函数数量越多，模型越复杂，GCV就会越大。因此在每个反向删除步骤中需要去除一项，使得GCV值最小。</p>
+</li>
+<li></li>
+<li><p><strong>模型应用实例 (Examples of Models Application)</strong></p>
 </li>
 </ul>
-<ul>
-<li>模型应用实例</li>
-</ul>
-<h1 id="程序解析与应用-Programme-Analysis-and-Application"><a href="#程序解析与应用-Programme-Analysis-and-Application" class="headerlink" title="程序解析与应用 (Programme Analysis and Application)"></a><font face="华文中宋" size="5">程序解析与应用 (Programme Analysis and Application)</font></h1><h3 id="1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available"><a href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available" class="headerlink" title="[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available"></a><font face="Time New Roman" size="4" color="orange">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available</font></h3><p>at <a href="http://www.cs.rtu.lv/jekabsons/" target="_blank" rel="noopener">http://www.cs.rtu.lv/jekabsons/</a> . &lt;/font&gt;</p>
-
+<h1 id="程序解析与应用-Programme-Analysis-and-Application"><a href="#程序解析与应用-Programme-Analysis-and-Application" class="headerlink" title="程序解析与应用 (Programme Analysis and Application)"></a><font face="华文中宋" size="5">程序解析与应用 (Programme Analysis and Application)</font></h1><h3 id="1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><a href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons" class="headerlink" title="[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. "></a><font face="Time New Roman" size="4" color="orange">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at <a href="http://www.cs.rtu.lv/jekabsons/" target="_blank" rel="noopener">http://www.cs.rtu.lv/jekabsons/</a>. </font></h3>
       
     </div>
     
@@ -689,7 +700,7 @@ f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文献阅读综述-Literatures-Review"><span class="nav-text">文献阅读综述 (Literatures Review)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><span class="nav-text">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><span class="nav-text">[1] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><span class="nav-text">[2] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基本原理-Basic-Principles"><span class="nav-text">基本原理 (Basic Principles)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序解析与应用-Programme-Analysis-and-Application"><span class="nav-text">程序解析与应用 (Programme Analysis and Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available"><span class="nav-text">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文献阅读综述-Literatures-Review"><span class="nav-text">文献阅读综述 (Literatures Review)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><span class="nav-text">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><span class="nav-text">[1] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><span class="nav-text">[2] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基本原理-Basic-Principles"><span class="nav-text">基本原理 (Basic Principles)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序解析与应用-Programme-Analysis-and-Application"><span class="nav-text">程序解析与应用 (Programme Analysis and Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><span class="nav-text">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. </span></a></li></ol></li></div>
             
 
           </div>
