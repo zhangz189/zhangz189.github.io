@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta name="description" content="摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用。">
 <meta name="keywords" content="机器学习,科研进展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多元自适应回归样条方法MARS及其应用">
 <meta property="og:url" content="http://yoursite.com/2019/07/26/20190726-多元自适应回归样条方法MARS及其应用/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
-<meta property="og:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta property="og:description" content="摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-02T07:46:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="多元自适应回归样条方法MARS及其应用">
-<meta name="twitter:description" content="本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用 摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用">
+<meta name="twitter:description" content="摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用。">
 
 
 
@@ -453,8 +453,7 @@
       
 
       
-        <p>本篇文章主要介绍一种数据拟合的算法<code>MARS</code>，以及其在土木工程领域的应用</p>
-<p>摘要：本篇文章主要介绍一种数据拟合的算法MARS，以及其在土木工程领域的应用</p>
+        <p>摘要：本篇文章主要介绍一种数据拟合的算法<code>MARS</code>，以及其在土木工程领域的应用。</p>
 <a id="more"></a>
 <h1 id="文献阅读综述-Literatures-Review"><a href="#文献阅读综述-Literatures-Review" class="headerlink" title="文献阅读综述 (Literatures Review)"></a><font face="华文中宋" size="5">文献阅读综述 (Literatures Review)</font></h1><h3 id="1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><a href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67" class="headerlink" title="[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67."></a><font face="Time New Roman" size="4" color="orange">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</font></h3><blockquote>
 </blockquote>
@@ -480,11 +479,25 @@ y=f(X_1,X_2,\cdots,X_n)+e=f(X)+e \tag{1}</script><p>其中 $e$ 是误差项，�
 f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中<font color="red">未知系数 $\beta$ 通过最小二乘法进行估计</font>得到，$M$ 表示当前组成该拟合方程的基函数的数量。</p>
 </li>
 <li><p><strong>前向选择阶段 (Forward Selection Procedure)</strong></p>
-<p>前向选择阶段由如上四个循环嵌套：</p>
-<p>第一个循环表示分段区间数量每次增加两个；</p>
-<p>第二个循环表示在每一分段区间内选择最优基函数；</p>
-<p>第三个循环表示对 $\lambda_m(X)$ 中未包括的变量 $x_v$ 增加分段；</p>
-<p>第四个循环表示为对应的变量 $x_v$ 寻找最优分段点 $t$ 。</p>
+<script type="math/tex; mode=display">
+\begin{array}{l}
+{\lambda _0}(X){\rm{ = }}1\\
+for\;M = 2:2：{M_{\max }}\\
+for\;m = 1:M - 1\\
+for\;v \in \{ v > {K_m}\} \\
+for\;t \in \{ {x_{vj}}|{\lambda _m}({X_j}) > 0\} \\
+\end{array}</script><script type="math/tex; mode=display">
+\hat{f}(X)=\sum_{i=1}^{M-1} \hat{\beta}_{i} \lambda_{i}(X)+\hat{\beta}_{M} \lambda_{m}(X) \max \left(0, x_{v}-t\right)+\hat{\beta}_{M+1} \lambda_{m}(X) \max \left(0, t-x_{v}\right)</script><p>前向选择阶段由如上四个循环嵌套：</p>
+<ul>
+<li><p>第一个循环表示分段区间数量每次增加两个；</p>
+</li>
+<li><p>第二个循环表示在每一分段区间内选择最优基函数；</p>
+</li>
+<li><p>第三个循环表示对 $\lambda_m(X)$ 中未包括的变量 $x_v$ 增加分段；</p>
+</li>
+<li><p>第四个循环表示为对应的变量 $x_v$ 寻找最优分段点 $t$ 。</p>
+</li>
+</ul>
 </li>
 <li><p><strong>反向删减阶段 (Backward Deletion Sequence)</strong></p>
 <p>前向选择阶段包括了数据的不确定因素，得到的往往是过拟合的模型，因此需要在反向删减阶段中去掉无关变量。反向删减阶段逐个地删除无效项后，通过计算比较得到最优模型。模型的计算比较通常采用较省算力的广义交叉验证方法(GCV)。</p>
@@ -629,7 +642,7 @@ f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
