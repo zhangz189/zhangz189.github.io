@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.4k 字
+                  2.8k 字
                 </span>
               
 
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5 分钟
+                  10 分钟
                 </span>
               
             </div>
@@ -455,61 +455,69 @@
       
         <p>摘要：本篇文章主要介绍一种数据拟合的算法<code>MARS</code>，以及其在土木工程领域的应用。</p>
 <a id="more"></a>
-<h1 id="文献阅读综述-Literatures-Review"><a href="#文献阅读综述-Literatures-Review" class="headerlink" title="文献阅读综述 (Literatures Review)"></a><font face="华文中宋" size="5">文献阅读综述 (Literatures Review)</font></h1><h3 id="1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><a href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67" class="headerlink" title="[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67."></a><font face="Time New Roman" size="4" color="orange">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</font></h3><blockquote>
+<h1 id="1-文献阅读综述-Literatures-Review"><a href="#1-文献阅读综述-Literatures-Review" class="headerlink" title="1. 文献阅读综述 (Literatures Review)"></a><font face="华文中宋" size="5">1. 文献阅读综述 (Literatures Review)</font></h1><h3 id="1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><a href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67" class="headerlink" title="[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67."></a><font face="Time New Roman" size="4" color="orange">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</font></h3><blockquote>
+<p>Friedman基于现有的多元回归方法，由非参数化建模、递归分区回归等方法的不足之处进行改进，提出了多元自适应回归样条方法 (MARS)，并给出了相应的应用实例。</p>
 </blockquote>
-<h3 id="1-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><a href="#1-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95" class="headerlink" title="[1] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95."></a><font face="Time New Roman" size="4" color="orange">[1] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</font></h3><blockquote>
+<h3 id="2-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><a href="#2-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95" class="headerlink" title="[2] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95."></a><font face="Time New Roman" size="4" color="orange">[2] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</font></h3><blockquote>
+<p>Zhang等详细介绍了多元自适应回归方法 (MARS) 的基本原理，并将其与逻辑回归相结合提出了逻辑回归-自适应回归方法 (LR_MARS)，使其更适于处理分类问题。</p>
+<p>文中以单变量简单方程拟合、双变量二维拟合、含噪声的方程拟合、HP桩的打桩分析、隧道开挖引发的地表沉降预测、密实土的破坏势预测、钻杆的不排水侧阻力评估、软黏土中地连墙的挠度预测以及土体液化势预测等9个实例验证了MARS方法的可行性，并将其与反向传播神经网络的计算结果进行了对比，发现MARS方法的预测性能与神经网络接近，甚至在一些实例中略优于神经网络，而且MARS还具有计算速度和敏感性分析的优势。</p>
+<p>特别的，<strong><font color="red">在软黏土中地连墙的挠度预测实例中，作者使用了有限元计算得到的大量数据作为训练和测试数据。</font></strong>而在土体液化势的预测实例中，基于170组场地数据，在考虑6个输入变量的情况下分别使用了神经网络和LR_MARS方法，结果认为神经网络的预测精度略优于LR_MARS，但计算成本更高。</p>
 </blockquote>
-<h3 id="2-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><a href="#2-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10" class="headerlink" title="[2] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10."></a><font face="Time New Roman" size="4" color="orange">[2] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</font></h3><blockquote>
+<h3 id="3-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><a href="#3-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10" class="headerlink" title="[3] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10."></a><font face="Time New Roman" size="4" color="orange">[3] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</font></h3><blockquote>
 <p>Goh等基于484组液化侧移数据，利用多元自适应回归样条(MARS)建立了地震液化侧移的预测模型。MARS是一种非参数化的非线性算法，它对数据采用分而治之的分析策略，将样本数据分割为不同梯度的线性分段（样条），然后采用逐步搜索的方法得到整个分段曲线的基函数。</p>
 <p>最终基于二阶相关性的MARS模型，对自由面场地和缓坡场地分别得到了17个基函数的线性样条函数和18个基函数的线性样条函数。将计算结果的R<sup>2</sup>值、均方差值 (RMSE) 和相对误差进行比较，发现MARS模型的预测比传统的MLR方法更加准确。文中还进行了参数的敏感性分析，认为自由面场地的两个最重要因素分别是log(W)（自由面坡度对数值）和震中距，而缓坡场地的两个最重要因素分别是震级和震中距。</p>
 <p>总体来说，MARS方法相比传统的MLR方法在预测液化侧移时准确性更高，并且能够给出参数的相对重要性，计算效率也较高，在地震液化侧移的预测领域具有较好的发展前景。</p>
 </blockquote>
-<h1 id="基本原理-Basic-Principles"><a href="#基本原理-Basic-Principles" class="headerlink" title="基本原理 (Basic Principles)"></a><font face="华文中宋" size="5">基本原理 (Basic Principles)</font></h1><p>Friedman (1991) 首次提出将多元自适应回归样条 (MARS) 作为一种拟合输入变量及其依赖变量之间复杂关系的统计分析方法。该方法将训练数据分割为不同梯度的分段线性区间（样条），分段区间的端点被称为节点，通过分段线性基函数组合可以得到整个分段样条曲线的拟合方程。</p>
+<h3 id="4-Zhang-W-G-Goh-A-T-C-Multivariate-Adaptive-Regression-Splines-Models-for-Analyses-of-Diaphragm-Wall-and-Drilled-Shafts-—-Numerical-Case-Studies-C-Tunneling-and-Underground-Construction-Shanghai-China-American-Society-of-Civil-Engineers-2014-710–719"><a href="#4-Zhang-W-G-Goh-A-T-C-Multivariate-Adaptive-Regression-Splines-Models-for-Analyses-of-Diaphragm-Wall-and-Drilled-Shafts-—-Numerical-Case-Studies-C-Tunneling-and-Underground-Construction-Shanghai-China-American-Society-of-Civil-Engineers-2014-710–719" class="headerlink" title="[4] Zhang W G, Goh A T C. Multivariate Adaptive Regression Splines Models for Analyses of Diaphragm Wall and Drilled Shafts — Numerical Case Studies[C]//Tunneling and Underground Construction. Shanghai, China: American Society of Civil Engineers, 2014: 710–719."></a><font face="Time New Roman" size="4" color="orange">[4] Zhang W G, Goh A T C. Multivariate Adaptive Regression Splines Models for Analyses of Diaphragm Wall and Drilled Shafts — Numerical Case Studies[C]//Tunneling and Underground Construction. Shanghai, China: American Society of Civil Engineers, 2014: 710–719.</font></h3><blockquote>
+<p>Zhang等提出将MARS用于分析涉及大量设计变量的工程问题，并用其描述变量之间的统计相关性。文中用MARS进行了两个实例的分析。</p>
+<p>第一个实例是地下连续墙的挠度变形分析，文章使用1120组数值分析的计算数据进行MARS模型的训练和测试，得到的训练集和测试集的决定系数 $R^{2}$ 分别为0.938和0.949，具有较为合理的精度。通过MARS的方差分析(ANOVA)对输入变量进行分解 ，认为对挠度变形影响最大的变量分别是墙体刚度和土体刚度。</p>
+<p>第二个实例是钻杆的不排水侧阻力分析，文章利用127组现场加载试验的数据进行MARS模型的训练和测试，训练和测试的决定系数 $R^{2}$ 分别为0.876和0.812，也同样进行了参数的敏感性分析。</p>
+</blockquote>
+<h3 id="5-Zhang-W-Goh-A-T-C-Evaluating-seismic-liquefaction-potential-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Geomechanics-and-Engineering-2016-10-3-269–284-lt-font-gt"><a href="#5-Zhang-W-Goh-A-T-C-Evaluating-seismic-liquefaction-potential-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Geomechanics-and-Engineering-2016-10-3-269–284-lt-font-gt" class="headerlink" title="[5] Zhang W, Goh A T C. Evaluating seismic liquefaction potential using multivariate adaptive regression splines and logistic regression[J]. Geomechanics and Engineering, 2016, 10(3): 269–284.&lt;/font&gt;"></a><font face="Time New Roman" size="4" color="orange">[5] Zhang W, Goh A T C. Evaluating <font color="red">seismic liquefaction potential</font> using multivariate adaptive regression splines and logistic regression[J]. Geomechanics and Engineering, 2016, 10(3): 269–284.&lt;/font&gt;</font></h3><blockquote>
+<p>Zhang等介绍了MARS的基本原理，并将其修改得到适用于分类问题的逻辑回归-自适应回归方法 (LR_MARS)，阐述了模型判断准确度的评价指标。文中分别基于三个液化数据库（Juang等的226个数据样本，Goh等的170个数据样本和Chern等的466组数据样本），利用LR_MARS方法建立了对应的土体地震液化势的评估模型，并分别将其与原文中的模型（Juang等的神经网络模型，Goh等的基于贝叶斯分类法的概率神经网络和Chern等的）进行了对比。</p>
+<p>结果充分证明了LR_MARS方法在拟合地震液化数据时的有效性，而且将其与神经网络方法对比时，可以取得同样的或者稍差一点的精度，但是综合考虑到MARS方法的计算效率、可解释性、预测精度、数据驱动和自适应的特性以及较低的I型误差，可以认为LR_MARS方法是预测土体地震液化势的有效方法。</p>
+</blockquote>
+<h3 id="6-Goh-A-T-C-Zhang-Y-Zhang-R-et-al-Evaluating-stability-of-underground-entry-type-excavations-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Tunnelling-and-Underground-Space-Technology-2017-70-148–154"><a href="#6-Goh-A-T-C-Zhang-Y-Zhang-R-et-al-Evaluating-stability-of-underground-entry-type-excavations-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Tunnelling-and-Underground-Space-Technology-2017-70-148–154" class="headerlink" title="[6] Goh A T C, Zhang Y, Zhang R, et al. Evaluating stability of underground entry-type excavations using multivariate adaptive regression splines and logistic regression[J]. Tunnelling and Underground Space Technology, 2017, 70: 148–154."></a><font face="Time New Roman" size="4" color="orange">[6] Goh A T C, Zhang Y, Zhang R, et al. Evaluating stability of underground entry-type excavations using multivariate adaptive regression splines and logistic regression[J]. Tunnelling and Underground Space Technology, 2017, 70: 148–154.</font></h3><blockquote>
+<p>Goh等将逻辑回归-自适应回归方法 (LR_MARS) 用于地下进入式开挖的稳定性分析，利用加拿大的399组地下开挖实例数据进行模型的训练和测试，从模型的结果来看，LR_MARS方法在精度、计算效率、可解释性等方面具有较大的优势。</p>
+</blockquote>
+<h1 id="2-MARS基本原理-Basic-Principles"><a href="#2-MARS基本原理-Basic-Principles" class="headerlink" title="2. MARS基本原理 (Basic Principles)"></a><font face="华文中宋" size="5">2. MARS基本原理 (Basic Principles)</font></h1><p>Friedman (1991) 首次提出将多元自适应回归样条 (MARS) 作为一种拟合输入变量及其依赖变量之间复杂关系的统计分析方法。该方法将训练数据分割为不同梯度的分段线性区间（样条），分段区间的端点被称为节点，通过分段线性基函数组合可以得到整个分段样条曲线的拟合方程。</p>
 <ul>
 <li><p><strong>变量与样条函数 (Variates and Splines)</strong></p>
 <p>令$X=(X_1,X_2,\cdots ,X_n)$为 $n$ 个输入变量组成的矩阵，对应的输出变量为 $y$ ，假设输入变量与输出变量之间存在一个函数模型如下式：</p>
 <script type="math/tex; mode=display">
-y=f(X_1,X_2,\cdots,X_n)+e=f(X)+e \tag{1}</script><p>其中 $e$ 是误差项，而MARS方法就是通过基函数来拟合方程 $f$ ，基函数由分段样条函数（连续光滑多项式）组合而成，样条函数可以是分段线性函数或分段立方函数等。</p>
+y=f\left(X_{1}, X_{2}, \cdots, X_{n}\right)+e=f(X)+e \tag{1}</script><p>其中 $e$ 是误差项，而MARS方法就是通过基函数来拟合方程 $f$ ，基函数由分段样条函数（连续光滑多项式）组合而成，样条函数可以是分段线性函数或分段立方函数等。</p>
 <p>以下以较简单的分段线性样条函数 $max(0,x-t)$ 为例进行说明， $t$ 为分段区间的端点值，该式计算规则如下：</p>
 <script type="math/tex; mode=display">
 \max (0, x-t)=\left\{\begin{array}{l}{x-t, \text { if } x \geqslant t} \\ {0, \text { otherwise }}\end{array}\right. \tag{2}</script></li>
 <li><p><strong>基函数 (Basis Functions)</strong></p>
 <p>由一个上述的分段线性样条函数或者多个样条函数的乘积，可以得到基函数$\lambda_m(X)$，由未知系数 $\beta$ 对基函数进行线性组合，可以得到整个分段样条曲线的拟合方程：</p>
 <script type="math/tex; mode=display">
-f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中<font color="red">未知系数 $\beta$ 通过最小二乘法进行估计</font>得到，$M$ 表示当前组成该拟合方程的基函数的数量。</p>
+f(X)=\beta_{0}+\sum_{m=1}^{M} \beta_{m} \lambda_{m}(X) \tag{3}</script><p>其中<strong><font color="red">未知系数 $\beta$ 通过最小二乘法进行估计</font></strong>得到，$M$ 表示当前组成该拟合方程的基函数的数量。</p>
 </li>
 <li><p><strong>前向选择阶段 (Forward Selection Procedure)</strong></p>
+<p>最初假设拟合方程仅包含一个 $\lambda_{0}(X)=1$ 的基函数，设置最大分段数 $M_{\max }$ ，然后由两个分段区间开始循环直至达到设置的最大分段区间数。在循环过程中记录分段区间数、区间节点值等，从而在循环结束后得到最优值。</p>
 <script type="math/tex; mode=display">
-\begin{array}{l}
-{\lambda _0}(X){\rm{ = }}1\\
-for\;M = 2:2：{M_{\max }}\\
-for\;m = 1:M - 1\\
-for\;v \in \{ v > {K_m}\} \\
-for\;t \in \{ {x_{vj}}|{\lambda _m}({X_j}) > 0\} \\
-\end{array}</script><script type="math/tex; mode=display">
-\hat{f}(X)=\sum_{i=1}^{M-1} \hat{\beta}_{i} \lambda_{i}(X)+\hat{\beta}_{M} \lambda_{m}(X) \max \left(0, x_{v}-t\right)+\hat{\beta}_{M+1} \lambda_{m}(X) \max \left(0, t-x_{v}\right)</script><p>前向选择阶段由如上四个循环嵌套：</p>
+\begin{array}{l}{\lambda_{0}(X)=1} \\ {\text { for } M=2 : 2 : M_{\max }} \\ {\text { for } m=1 : M-1} \\ {\text { for } v \in\left\{v>K_{m}\right\}} \\ {\text { for } t \in\left\{x_{v j} | \lambda_{m}\left(X_{j}\right)>0\right\}}\end{array}</script><script type="math/tex; mode=display">
+\hat{f}(X)=\sum_{i=1}^{M-1} \hat{\beta}_{i} \lambda_{i}(X)+\hat{\beta}_{M} \lambda_{m}(X) \max \left(0, x_{v}-t\right)+\hat{\beta}_{M+1} \lambda_{m}(X) \max \left(0, t-x_{v}\right)</script><p>前向选择阶段由如上四个循环嵌套，其中$\max \left(.\right)$ 表示仅正数可用，否则取值为0:</p>
 <ul>
-<li><p>第一个循环表示分段区间数量每次增加两个；</p>
-</li>
-<li><p>第二个循环表示在每一分段区间内选择最优基函数；</p>
-</li>
-<li><p>第三个循环表示对 $\lambda_m(X)$ 中未包括的变量 $x_v$ 增加分段；</p>
-</li>
-<li><p>第四个循环表示为对应的变量 $x_v$ 寻找最优分段点 $t$ 。</p>
-</li>
+<li>第一个循环表示每次增加一个节点，从而分段区间数量每次增加两个；</li>
+<li>第二个循环表示逐个地在分段区间内选择最优基函数；</li>
+<li>第三个循环表示对 $\lambda_m(X)$ 中未包括的变量 $x_v$ 增加分段；</li>
+<li>第四个循环表示为对应的变量 $x_v$ 寻找最优分段点 $t$ 。</li>
 </ul>
 </li>
 <li><p><strong>反向删减阶段 (Backward Deletion Sequence)</strong></p>
 <p>前向选择阶段包括了数据的不确定因素，得到的往往是过拟合的模型，因此需要在反向删减阶段中去掉无关变量。反向删减阶段逐个地删除无效项后，通过计算比较得到最优模型。模型的计算比较通常采用较省算力的广义交叉验证方法(GCV)。</p>
 <p>对于 $N$ 组数据组成的训练数据集，模型的GCV参数计算公式如下：</p>
 <script type="math/tex; mode=display">
-\mathrm{GCV}=\frac{\frac{1}{N} \sum_{i=1}^{N}\left[y_{i}-f\left(x_{i}\right)\right]^{2}}{\left[1-\frac{M+d \times(M-1) / 2}{N}\right]^{2}}</script><p>其中分子是用模型拟合训练数据时的均方误差，分母是模型复杂程度的惩罚项， $(M - 1)/2$ 代表分段函数的节点数量，$M$ 表示基函数的数量，因此节点和基函数数量越多，模型越复杂，GCV就会越大。因此在每个反向删除步骤中需要去除一项，使得GCV值最小。</p>
+\mathrm{GCV}=\frac{\frac{1}{N} \sum_{i=1}^{N}\left[y_{i}-f\left(x_{i}\right)\right]^{2}}{\left[1-\frac{M+d \times(M-1) / 2}{N}\right]^{2}}</script><p>其中分子是用模型拟合训练数据时的均方误差，分母是模型复杂程度的惩罚项， $(M - 1)/2$ 代表分段函数的节点数量，$M$ 表示基函数的数量，$d$ 是惩罚参数，默认值为3。因此节点和基函数数量越多，模型越复杂，GCV就会越大。因此在每个反向删除步骤中需要去除一项，使得GCV值最小。</p>
+<p><strong><font color="red">因为基函数BFs的选择和变量节点的取值都是基于训练参数得到的，而且会随着具体问题而改变的，所以称MARS为自适应过程。</font></strong></p>
 </li>
-<li></li>
-<li><p><strong>模型应用实例 (Examples of Models Application)</strong></p>
-</li>
+<li><p><strong>方差分析 (ANOVA)</strong></p>
+<p>在确定了最优的MARS模型之后，通过将仅包含一个变量的基函数归纳为一组，将包含两个及以上变量的基函数归纳为一组，然后使用<strong>方差分析分解法</strong>评估整个模型对各个输入函数和基函数的敏感程度。</p>
+<h1 id="3-LR-MARS原理-Logistic-MARS-Principles"><a href="#3-LR-MARS原理-Logistic-MARS-Principles" class="headerlink" title="3. LR_MARS原理 (Logistic MARS Principles)"></a><font face="华文中宋" size="5">3. LR_MARS原理 (Logistic MARS Principles)</font></h1></li>
 </ul>
-<h1 id="程序解析与应用-Programme-Analysis-and-Application"><a href="#程序解析与应用-Programme-Analysis-and-Application" class="headerlink" title="程序解析与应用 (Programme Analysis and Application)"></a><font face="华文中宋" size="5">程序解析与应用 (Programme Analysis and Application)</font></h1><h3 id="1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><a href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons" class="headerlink" title="[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. "></a><font face="Time New Roman" size="4" color="orange">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at <a href="http://www.cs.rtu.lv/jekabsons/" target="_blank" rel="noopener">http://www.cs.rtu.lv/jekabsons/</a>. </font></h3>
+<h1 id="4-程序解析与应用-Programme-Analysis-and-Application"><a href="#4-程序解析与应用-Programme-Analysis-and-Application" class="headerlink" title="4. 程序解析与应用 (Programme Analysis and Application)"></a><font face="华文中宋" size="5">4. 程序解析与应用 (Programme Analysis and Application)</font></h1><h3 id="1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><a href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons" class="headerlink" title="[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. "></a><font face="Time New Roman" size="4" color="orange">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at <a href="http://www.cs.rtu.lv/jekabsons/" target="_blank" rel="noopener">http://www.cs.rtu.lv/jekabsons/</a>. </font></h3>
       
     </div>
     
@@ -642,7 +650,7 @@ for\;t \in \{ {x_{vj}}|{\lambda _m}({X_j}) > 0\} \\
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -713,7 +721,7 @@ for\;t \in \{ {x_{vj}}|{\lambda _m}({X_j}) > 0\} \\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文献阅读综述-Literatures-Review"><span class="nav-text">文献阅读综述 (Literatures Review)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><span class="nav-text">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><span class="nav-text">[1] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><span class="nav-text">[2] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#基本原理-Basic-Principles"><span class="nav-text">基本原理 (Basic Principles)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序解析与应用-Programme-Analysis-and-Application"><span class="nav-text">程序解析与应用 (Programme Analysis and Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><span class="nav-text">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. </span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-文献阅读综述-Literatures-Review"><span class="nav-text">1. 文献阅读综述 (Literatures Review)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Friedman-J-H-Multivariate-adaptive-regression-splines-J-The-annals-of-statistics-1991-19-1-1–67"><span class="nav-text">[1] Friedman J H. Multivariate adaptive regression splines[J]. The annals of statistics, 1991, 19(1): 1–67.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Zhang-W-G-Goh-A-T-C-Multivariate-adaptive-regression-splines-for-analysis-of-geotechnical-engineering-systems-J-Computers-and-Geotechnics-2013-48-82–95"><span class="nav-text">[2] Zhang W G, Goh A T C. Multivariate adaptive regression splines for analysis of geotechnical engineering systems[J]. Computers and Geotechnics, 2013, 48: 82–95.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Goh-Anthony-T-C-Zhang-W-G-An-improvement-to-MLR-model-for-predicting-liquefaction-induced-lateral-spread-using-multivariate-adaptive-regression-splines-J-Engineering-Geology-2014-170-1–10"><span class="nav-text">[3] Goh Anthony T C, Zhang W G. An improvement to MLR model for predicting liquefaction-induced lateral spread using multivariate adaptive regression splines[J]. Engineering Geology, 2014, 170: 1–10.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Zhang-W-G-Goh-A-T-C-Multivariate-Adaptive-Regression-Splines-Models-for-Analyses-of-Diaphragm-Wall-and-Drilled-Shafts-—-Numerical-Case-Studies-C-Tunneling-and-Underground-Construction-Shanghai-China-American-Society-of-Civil-Engineers-2014-710–719"><span class="nav-text">[4] Zhang W G, Goh A T C. Multivariate Adaptive Regression Splines Models for Analyses of Diaphragm Wall and Drilled Shafts — Numerical Case Studies[C]//Tunneling and Underground Construction. Shanghai, China: American Society of Civil Engineers, 2014: 710–719.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Zhang-W-Goh-A-T-C-Evaluating-seismic-liquefaction-potential-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Geomechanics-and-Engineering-2016-10-3-269–284-lt-font-gt"><span class="nav-text">[5] Zhang W, Goh A T C. Evaluating seismic liquefaction potential using multivariate adaptive regression splines and logistic regression[J]. Geomechanics and Engineering, 2016, 10(3): 269–284.&lt;/font&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-Goh-A-T-C-Zhang-Y-Zhang-R-et-al-Evaluating-stability-of-underground-entry-type-excavations-using-multivariate-adaptive-regression-splines-and-logistic-regression-J-Tunnelling-and-Underground-Space-Technology-2017-70-148–154"><span class="nav-text">[6] Goh A T C, Zhang Y, Zhang R, et al. Evaluating stability of underground entry-type excavations using multivariate adaptive regression splines and logistic regression[J]. Tunnelling and Underground Space Technology, 2017, 70: 148–154.</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#2-MARS基本原理-Basic-Principles"><span class="nav-text">2. MARS基本原理 (Basic Principles)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-LR-MARS原理-Logistic-MARS-Principles"><span class="nav-text">3. LR_MARS原理 (Logistic MARS Principles)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-程序解析与应用-Programme-Analysis-and-Application"><span class="nav-text">4. 程序解析与应用 (Programme Analysis and Application)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Jekabsons-G-ARESLab-Adaptive-Regression-Splines-toolbox-for-Matlab-Octave-2016-available-at-http-www-cs-rtu-lv-jekabsons"><span class="nav-text">[1] Jekabsons G., ARESLab: Adaptive Regression Splines toolbox for Matlab/Octave, 2016, available at http://www.cs.rtu.lv/jekabsons/. </span></a></li></ol></li></div>
             
 
           </div>
