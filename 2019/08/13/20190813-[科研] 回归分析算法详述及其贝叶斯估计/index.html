@@ -94,10 +94,12 @@
 <meta property="og:site_name" content="Paradise of Mind">
 <meta property="og:description" content="摘要：回归分析是数据拟合中最为重要也最常用的一种技术，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-17T09:54:45.031Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/13/20190813-[科研]%20回归分析算法详述及其贝叶斯估计/sigmoid.jpg">
+<meta property="og:updated_time" content="2019-08-20T03:48:02.914Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="回归分析算法详述及其贝叶斯估计">
 <meta name="twitter:description" content="摘要：回归分析是数据拟合中最为重要也最常用的一种技术，">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/13/20190813-[科研]%20回归分析算法详述及其贝叶斯估计/sigmoid.jpg">
 
 
 
@@ -347,16 +349,16 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-17T17:54:45+08:00">
-                2019-08-17
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-20T11:48:02+08:00">
+                2019-08-20
               </time>
             
 			
 			
               <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2019-08-17T17:54:45+08:00" content="2019-08-17">
-                2019-08-17
+              <time itemprop="dateUpdated" datetime="2019-08-20T11:48:02+08:00" content="2019-08-20">
+                2019-08-20
                </time>
               </span>
             
@@ -451,7 +453,9 @@
 <h2 id="2-4-线性回归模型的特点"><a href="#2-4-线性回归模型的特点" class="headerlink" title="2.4 线性回归模型的特点"></a>2.4 线性回归模型的特点</h2><p>线性回归模型适用于自变量和因变量存在线性关系的情况下，它的优点是简单快速，而且可以根据求出的系数给每个自变量的影响加以解释说明。<br>但线性回归模型对异常值敏感，数据样本中异常值可能会导致较大的结果偏差，而且多元线性回归中各自变量之间可能存在多重共线性（是指自变量之间具有很强的相关关系，比如地震液化中有效应力和总应力的关系。可以通过降维或剔除来避免。），会增大模型估计值的不稳定性。</p>
 <h2 id="2-5-Feasure-Normalization-参数标准化"><a href="#2-5-Feasure-Normalization-参数标准化" class="headerlink" title="2.5 Feasure Normalization(参数标准化)"></a>2.5 Feasure Normalization(参数标准化)</h2><p>1 、Feasure Scaling<br>Replace Xi with Xi/S(S is range of max-min or standard deviation)<br>2、Mean Normalization<br>Replace Xi with Xi-ui(ui is the mean value of Xi feasure)<br>3、Conbine 1 and 2<br>Replace Xi with (Xi-ui)/S</p>
 <h2 id="2-6-Regularized-Linear-Regression-Gradient"><a href="#2-6-Regularized-Linear-Regression-Gradient" class="headerlink" title="2.6 Regularized Linear Regression Gradient"></a>2.6 Regularized Linear Regression Gradient</h2><h2 id="3-逻辑回归模型"><a href="#3-逻辑回归模型" class="headerlink" title="3 逻辑回归模型"></a>3 逻辑回归模型</h2><h2 id="3-1-定义"><a href="#3-1-定义" class="headerlink" title="3.1 定义"></a>3.1 定义</h2><p>逻辑回归模型是一种广义线性回归模型，它的输出是分类结果而不是连续结果，适用于因变量为二分类或多分类的问题中。一般逻辑回归函数中存在变量   ，表示该多分类问题属于某一类的可能性大小，当   处于不同区间（根据实际问题定义）时，因变量的分类输出结果随之变化。</p>
-<h2 id="3-2-逻辑回归模型"><a href="#3-2-逻辑回归模型" class="headerlink" title="3.2 逻辑回归模型"></a>3.2 逻辑回归模型</h2><p>逻辑回归模型来源于线性回归模型，所以逻辑回归函数中自变量仍为线性组合，而变量   的取值范围为[0,1]，与自变量的线性组合计算值取值区间不同，也不成直线关系。所以引入   扩大变量的取值范围，然后经验显示对   加以对数变换后的新变量   与自变量成线性关系（这是一个假设，真正的逻辑回归的定义只是引入了sigmoid函数），此即为logit函数或log-odds函数。<br>假设一个二分类问题，有   组数据样本，每组样本中有   个自变量，则由第   组数据建立的逻辑回归函数如式(3-1)。<br>其中   是   ，表示由第   组自变量   和未知参数   推断到的因变量   取1的可能性。经过变换可以得到   的表达式如式(3-2)。<br>其中   是sigmoid函数，又叫logistic函数，因此可以把该函数看作逻辑回归中的概率密度函数，函数图像如图3-1。<br>图3-1 sigmoid函数图像<br>以下说明逻辑回归模型的建模步骤：<br>①       逻辑回归函数，计算样本因变量属于某一类别的可能性，如式(3-3)。<br>②       决策函数，确定给定样本的类型，如式(3-4)。<br>式(3-4)表示   处于某一区间，则决定了自变量所属的类别。其中区间界限值   可以根据实际情况自己定义。<br>③       决策边界，标识分类函数的分类边界，如式(3-5)。<br>式(3-5)表示当   等于区分类别的界限值时的函数方程，标识了两个分类之间的边界。<br>④       损失函数，表明估计值与真实值之间的差异，计算过程如下。<br>损失函数没有特定形式，仅仅表明预测值和真实值之间的差异大小。在线性回归中，损失函数是对所有数据样本的估计偏差求和平均。而在逻辑回归中，使用极大似然估计法来得到损失函数   。<br>式(3-6)表示服从二项分布的因变量   的概率分布函数，则现有   组数据样本，根据极大似然估计，该组数据样本的概率应该是最大，则可以得到如下似然函数   如式(3-7)。</p>
+<h2 id="3-2-逻辑回归模型"><a href="#3-2-逻辑回归模型" class="headerlink" title="3.2 逻辑回归模型"></a>3.2 逻辑回归模型</h2><p>逻辑回归模型来源于线性回归模型，所以逻辑回归函数中自变量仍为线性组合，而变量   的取值范围为[0,1]，与自变量的线性组合计算值取值区间不同，也不成直线关系。所以引入   扩大变量的取值范围，然后经验显示对   加以对数变换后的新变量   与自变量成线性关系（这是一个假设，真正的逻辑回归的定义只是引入了sigmoid函数），此即为logit函数或log-odds函数。<br>假设一个二分类问题，有   组数据样本，每组样本中有   个自变量，则由第   组数据建立的逻辑回归函数如式(3-1)。<br>其中   是   ，表示由第   组自变量   和未知参数   推断到的因变量   取1的可能性。经过变换可以得到   的表达式如式(3-2)。<br>其中   是sigmoid函数，又叫logistic函数，因此可以把该函数看作逻辑回归中的概率密度函数，函数图像如图3-1。</p>
+<p><img src="sigmoid.jpg" alt="sigmoid"></p>
+<p>图3-1 sigmoid函数图像<br>以下说明逻辑回归模型的建模步骤：<br>①       逻辑回归函数，计算样本因变量属于某一类别的可能性，如式(3-3)。<br>②       决策函数，确定给定样本的类型，如式(3-4)。<br>式(3-4)表示   处于某一区间，则决定了自变量所属的类别。其中区间界限值   可以根据实际情况自己定义。<br>③       决策边界，标识分类函数的分类边界，如式(3-5)。<br>式(3-5)表示当   等于区分类别的界限值时的函数方程，标识了两个分类之间的边界。<br>④       损失函数，表明估计值与真实值之间的差异，计算过程如下。<br>损失函数没有特定形式，仅仅表明预测值和真实值之间的差异大小。在线性回归中，损失函数是对所有数据样本的估计偏差求和平均。而在逻辑回归中，使用极大似然估计法来得到损失函数   。<br>式(3-6)表示服从二项分布的因变量   的概率分布函数，则现有   组数据样本，根据极大似然估计，该组数据样本的概率应该是最大，则可以得到如下似然函数   如式(3-7)。</p>
 <p>似然函数   是这些数据样本出现的概率，要使之最大，经过对数变换并乘以系数   后得到损失函数   ，如式(3-8)。<br>用矩阵表示：<br>此时就可以通过梯度下降法等方法计算损失函数   取最小值时的未知参数的取值。</p>
 <h2 id="3-3-参数估计方法"><a href="#3-3-参数估计方法" class="headerlink" title="3.3 参数估计方法"></a>3.3 参数估计方法</h2><h2 id="3-3-1-梯度下降法"><a href="#3-3-1-梯度下降法" class="headerlink" title="3.3.1 梯度下降法"></a>3.3.1 梯度下降法</h2><p>由2.3.2节的介绍可知梯度下降法的计算原理如式(3-1)。</p>
 <p>​                                                        </p>
@@ -642,7 +646,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -653,7 +657,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -664,7 +668,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -922,6 +926,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'zhangz189',
+            repo: 'CommentRepo',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '8ca6d91396d3c56c19171592e9e90d1c4dede257',
+            
+                client_id: 'f154ac95f60fa2a8a655'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
