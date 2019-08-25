@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="科研进展,数学基础,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -86,18 +86,20 @@
 
 
 
-<meta name="description" content="摘要：人工智能和大数据热潮的背后，必须要有强有力的数学基础作为支撑。一切数据分析和机器学习的根本还是对于数学原理的应用和转化。而概率论与数理统计学正式直接和机器学习相关的一部分，对于掌握和了解机器学习算法具有重要意义。">
-<meta name="keywords" content="科研进展,数学基础">
+<meta name="description" content="摘要：回归分析是数据拟合中最为重要也最常用的一种技术，">
+<meta name="keywords" content="Technology, Machine Learning, Seismology, Reading">
 <meta property="og:type" content="article">
-<meta property="og:title" content="概率论与数理统计学基础">
-<meta property="og:url" content="http://yoursite.com/2019/08/21/20190821-[科研] 概率论与数理统计学基础/index.html">
+<meta property="og:title" content="回归分析算法详述及其贝叶斯估计">
+<meta property="og:url" content="http://yoursite.com/2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
-<meta property="og:description" content="摘要：人工智能和大数据热潮的背后，必须要有强有力的数学基础作为支撑。一切数据分析和机器学习的根本还是对于数学原理的应用和转化。而概率论与数理统计学正式直接和机器学习相关的一部分，对于掌握和了解机器学习算法具有重要意义。">
+<meta property="og:description" content="摘要：回归分析是数据拟合中最为重要也最常用的一种技术，">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-21T09:10:32.804Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/26/20190726-[科研]%20回归分析算法详述及其贝叶斯估计/sigmoid.jpg">
+<meta property="og:updated_time" content="2019-08-25T12:02:31.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="概率论与数理统计学基础">
-<meta name="twitter:description" content="摘要：人工智能和大数据热潮的背后，必须要有强有力的数学基础作为支撑。一切数据分析和机器学习的根本还是对于数学原理的应用和转化。而概率论与数理统计学正式直接和机器学习相关的一部分，对于掌握和了解机器学习算法具有重要意义。">
+<meta name="twitter:title" content="回归分析算法详述及其贝叶斯估计">
+<meta name="twitter:description" content="摘要：回归分析是数据拟合中最为重要也最常用的一种技术，">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/26/20190726-[科研]%20回归分析算法详述及其贝叶斯估计/sigmoid.jpg">
 
 
 
@@ -127,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/21/20190821-[科研] 概率论与数理统计学基础/">
+  <link rel="canonical" href="http://yoursite.com/2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/">
 
 
 
 
 
-  <title>概率论与数理统计学基础 | Paradise of Mind</title>
+  <title>回归分析算法详述及其贝叶斯估计 | Paradise of Mind</title>
   
 
 
@@ -302,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/21/20190821-[科研] 概率论与数理统计学基础/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhengwen">
@@ -319,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">概率论与数理统计学基础</h1>
+          <h1 class="post-title" itemprop="name headline">回归分析算法详述及其贝叶斯估计</h1>
         
 
         <div class="post-meta">
@@ -331,8 +333,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-21T11:20:10+08:00">
-                2019-08-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-26T20:50:59+08:00">
+                2019-07-26
               </time>
             
 
@@ -347,43 +349,21 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-21T17:10:32+08:00">
-                2019-08-21
+              <time title="更新于" itemprop="dateModified" datetime="2019-08-25T20:02:31+08:00">
+                2019-08-25
               </time>
             
 			
 			
               <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2019-08-21T17:10:32+08:00" content="2019-08-21">
-                2019-08-21
+              <time itemprop="dateUpdated" datetime="2019-08-25T20:02:31+08:00" content="2019-08-25">
+                2019-08-25
                </time>
               </span>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -393,8 +373,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/08/21/20190821-[科研] 概率论与数理统计学基础/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/21/20190821-[科研] 概率论与数理统计学基础/" itemprop="commentCount"></span>
+                <a href="/2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,7 +396,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  479 字
+                  4.9k 字
                 </span>
               
 
@@ -432,7 +412,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  17 分钟
                 </span>
               
             </div>
@@ -453,19 +433,94 @@
       
 
       
-        <p>摘要：人工智能和大数据热潮的背后，必须要有强有力的数学基础作为支撑。一切数据分析和机器学习的根本还是对于数学原理的应用和转化。而概率论与数理统计学正式直接和机器学习相关的一部分，对于掌握和了解机器学习算法具有重要意义。</p>
+        <p>摘要：回归分析是数据拟合中最为重要也最常用的一种技术，</p>
 <a id="more"></a>
-<h2 id="1-常用概率分布-Support-Vector-Machine"><a href="#1-常用概率分布-Support-Vector-Machine" class="headerlink" title="1. 常用概率分布 ( Support Vector Machine )"></a><font face="华文中宋" size="6">1. 常用概率分布 ( Support Vector Machine )</font></h2><h2 id="2-贝叶斯估计-Bayesian-Inference"><a href="#2-贝叶斯估计-Bayesian-Inference" class="headerlink" title="2. 贝叶斯估计 ( Bayesian Inference )"></a><font face="华文中宋" size="6">2. 贝叶斯估计 ( Bayesian Inference )</font></h2><p>&emsp;&emsp;这是科学的一个重要方面，理论通过实验和模拟得到证实，做这些实验和验证这些理论的人越多，这些理论就越强大和可信。</p>
-<p><strong>Cromwell规则：</strong>如果一个人由等于零(我知道这些事件不是真的)或一(我知道这些事件是正确的)的先验概率开始，那无论向你展示什么证据，你的信念将不会被动摇。这在机器学习中是不可取的。</p>
-<p><strong>Bernstein-von Mises定理：</strong>当我们获得更多的数据时，我们的后验估计将渐进地独立于我们最初(先前)的信念——当然，前提是它遵循Cromwell规则。</p>
-<p>【怎样理解？】在频率论领域内，数据被认为是随机的，参数(如均值、方差)是固定的。在贝叶斯领域中，参数是随机的，数据是固定的。</p>
-<h2 id="常用概率与统计学概念"><a href="#常用概率与统计学概念" class="headerlink" title="- 常用概率与统计学概念"></a><font face="华文中宋" size="6">- 常用概率与统计学概念</font></h2><h3 id="1-大数定理-Law-of-large-numbers"><a href="#1-大数定理-Law-of-large-numbers" class="headerlink" title="1. 大数定理( Law of large numbers )"></a><font face="华文中宋" size="5">1. 大数定理( Law of large numbers )</font></h3><blockquote>
-<p>由概率的统计定义”频率收敛于概率“引申而来，设做$n$次独立试验，每次事件$A$发生的结果记为随机变量$X_i(i=1,\cdots,n)$，则事件$A$发生的频率为</p>
+<h2 id="1-概述-Abstract"><a href="#1-概述-Abstract" class="headerlink" title="1. 概述 (Abstract)"></a><font size="5">1. 概述 (Abstract)</font></h2><p>变量之间的关系通常有函数、相关和独立三种，回归分析即是用于估计一个因变量<font size="2" color="red">（多个因变量的回归存在吗？存在，可以将因变量降维，或者使用矩阵···）</font>和一个或多个自变量之间的相关关系的统计模型。具体来说，回归分析能够在给定自变量条件下估计对应因变量的条件期望或条件分布位置参数（中位数、最大值），一般需要假设回归方程。具体工作中，它可以用于预报预测以及探求自变量与因变量之间的相关关系。</p>
+<p>回归模型：</p>
 <script type="math/tex; mode=display">
-p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
-<h3 id="2-中心极限定理-Law-of-large-numbers"><a href="#2-中心极限定理-Law-of-large-numbers" class="headerlink" title="2. 中心极限定理( Law of large numbers )"></a><font face="华文中宋" size="5">2. 中心极限定理( Law of large numbers )</font></h3><blockquote>
-<p>概率论中，习惯于将和的分布收敛于正态分布的这一类定理都叫做“中心极限定理”。</p>
-</blockquote>
+\begin{array}{c}{\vec{Y} \approx f(X, \vec{\theta})} \\ {E(\vec{Y} | X)=f(X, \vec{\theta})} \\ {\vec{Y}=E(\vec{Y} | X)+\vec{\varepsilon}}\end{array}</script><p>其中   是因变量集合，   是关于   的回归函数，   是自变量集合，   是回归函数中的未知参数集合，   是由   以外的其他自变量对   造成的随机误差集合。式(1-1)是因变量真实值和自变量之间的近似函数关系，式(1-2)是回归模型中因变量的条件期望估计值和自变量之间的函数关系，式(1-3)是因变量真实值和其条件期望估计值之间的关系。若   是   维向量，样本中有   个   数据点，当   时，回归函数中的未知参数可以确定。</p>
+<h2 id="2-线性回归模型"><a href="#2-线性回归模型" class="headerlink" title="2. 线性回归模型"></a><font size="5">2. 线性回归模型</font></h2><h2 id="2-1-定-义"><a href="#2-1-定-义" class="headerlink" title="2.1 定 义"></a><font size="4">2.1 定 义</font></h2><p>当回归函数是关于自变量的线性函数时，即认为该回归模型是线性回归模型。当回归函数只有一个自变量时称为一元线性回归模型，当有多个自变量时称为多元线性回归模型。</p>
+<p>（线性回归模型看似与概率无关，怎样和极大似然估计相联系？线性回归模型中使用的最小二乘法，就是在给定样本下，对应未知参数的最大似然估计值）</p>
+<h2 id="2-2-线性回归模型"><a href="#2-2-线性回归模型" class="headerlink" title="2.2 线性回归模型"></a>2.2 线性回归模型</h2><p>线性回归函数的一般形式用代数表示如式(2-1)，其中   是线性回归函数中的未知参数，   是第   组数据（其中   ），   是第   组数据的真实值与估计值之间的随机误差。</p>
+<p>​                                </p>
+<p>由上式可得到随机误差   计算式，通常使用误差平方和   的大小评估回归模型的拟合精度时，   越小，拟合精度越高，   如式(2-2)计算。</p>
+<p>​                                       </p>
+<h2 id="2-3-参数估计方法"><a href="#2-3-参数估计方法" class="headerlink" title="2.3 参数估计方法"></a>2.3 参数估计方法</h2><h2 id="2-3-1-最小二乘法"><a href="#2-3-1-最小二乘法" class="headerlink" title="2.3.1 最小二乘法"></a>2.3.1 最小二乘法</h2><p>最小二乘法为了使误差平方和最小，将误差平方和   依次对未知参数   取偏导，当偏导等于0时，认为此时   的取值使得   达到了极小值，那么   就是参数估计值。计算如式(2-3)。（给定数据时，可能性最大的估计。）</p>
+<p>​                      </p>
+<p>上式表示一组正则方程，化简可得式(2-4)、(2-5)。<br>为便于使用编程计算，将上式用矩阵形式表示如式(2-6)，也被称为NormalEquation。<br>其中   是   维样本数据自变量数组，   是   维未知参数数组，   是   维样本数据因变量数组。（最小二乘法变成了p个等式，还需要p<n这个条件吗？当然需要，这样才能求出。而对于极大似然和最大后验方法，需要n>10×P，才能保证结果的准确性）<br>Tips:怎样理解NormalEquation<br>   代表方程组，仅在   是   中列向量的线性组合时，可求解   。因此两边同乘以   （前提是   可逆），此时   是   的列向量线性组合，也就是说等式右边的向量在左边矩阵的列空间中了。<br>该方法就是在原方程无解的时候，转而求解   在   的向量空间的投影来求得近似值，误差即为最小二乘法中求得的误差值。<br><a href="https://deserts.io/normal_equation/" target="_blank" rel="noopener">https://deserts.io/normal_equation/</a></n这个条件吗？当然需要，这样才能求出。而对于极大似然和最大后验方法，需要n></p>
+<h2 id="2-3-2-梯度下降法"><a href="#2-3-2-梯度下降法" class="headerlink" title="2.3.2 梯度下降法"></a>2.3.2 梯度下降法</h2><p>梯度下降法是可以用算法实现的最有效的参数估计方式之一，它在沿使损失函数   下降最快的方向对   不断迭代，最终得到使得   达到最小时   的取值。其中损失函数   的计算公式如式(2-7)。<br>梯度下降法计算公式如式(2-8)。<br>其中   是调节迭代快慢的步长系数，另引入算法终止系数   ，当   时迭代终止。首先需要对这些参数进行初始化，一般   初始化为0，步长系数   初始化为1，算法终止距离根据计算精度设置相应值。在计算过程中再不断优化相关系数的取值。代入梯度计算式后如式(2-9)所示。<br>为便于使用编程计算，将上式用矩阵形式表示如式(2-10)。<br>以上为批量梯度下降法(BGD)，即对所有的样本数据求梯度，损失函数是   项求和，计算量较大。为加快训练速度，又产生了随机梯度下降法(SGD)，该方法只对一个随机的样本数据求梯度，损失函数只包含一项，但这种方法的解很可能非最优，而且一次一个样本会导致迭代方向变化很大，不能很快收敛到局部最优解。计算公式如式(2-11)。<br>因此，综合以上两种方法的优势和不足，提出了小批量梯度下降法(Mini-batch Gradiant Desent)，选用   个样本数据求梯度。计算公式如式(2-12)。</p>
+<h2 id="2-3-3-参数估计的方法选择"><a href="#2-3-3-参数估计的方法选择" class="headerlink" title="2.3.3 参数估计的方法选择"></a>2.3.3 参数估计的方法选择</h2><p>最小二乘法通过将误差平方和转化为关于未知参数的正则方程组，从而计算出该方程组的解析解，该方法适用于样本量不大且有解析解的案例中。如果样本量很大时，逆矩阵的求解会很慢，或者当样本矩阵不可逆时，最小二乘法则不再适用。（最小二乘法主要在线性回归分析中常用？是的）<br>梯度下降法是一种迭代求解的方法，适用性更加广泛。但步长系数需要不断调整以取到最优值，而且有仅得到局部最优解的风险。</p>
+<h2 id="2-4-线性回归模型的特点"><a href="#2-4-线性回归模型的特点" class="headerlink" title="2.4 线性回归模型的特点"></a>2.4 线性回归模型的特点</h2><p>线性回归模型适用于自变量和因变量存在线性关系的情况下，它的优点是简单快速，而且可以根据求出的系数给每个自变量的影响加以解释说明。<br>但线性回归模型对异常值敏感，数据样本中异常值可能会导致较大的结果偏差，而且多元线性回归中各自变量之间可能存在多重共线性（是指自变量之间具有很强的相关关系，比如地震液化中有效应力和总应力的关系。可以通过降维或剔除来避免。），会增大模型估计值的不稳定性。</p>
+<h2 id="2-5-Feasure-Normalization-参数标准化"><a href="#2-5-Feasure-Normalization-参数标准化" class="headerlink" title="2.5 Feasure Normalization(参数标准化)"></a>2.5 Feasure Normalization(参数标准化)</h2><p>1 、Feasure Scaling<br>Replace Xi with Xi/S(S is range of max-min or standard deviation)<br>2、Mean Normalization<br>Replace Xi with Xi-ui(ui is the mean value of Xi feasure)<br>3、Conbine 1 and 2<br>Replace Xi with (Xi-ui)/S</p>
+<h2 id="2-6-Regularized-Linear-Regression-Gradient"><a href="#2-6-Regularized-Linear-Regression-Gradient" class="headerlink" title="2.6 Regularized Linear Regression Gradient"></a>2.6 Regularized Linear Regression Gradient</h2><h2 id="3-逻辑回归模型"><a href="#3-逻辑回归模型" class="headerlink" title="3 逻辑回归模型"></a>3 逻辑回归模型</h2><h2 id="3-1-定义"><a href="#3-1-定义" class="headerlink" title="3.1 定义"></a>3.1 定义</h2><p>逻辑回归模型是一种广义线性回归模型，它的输出是分类结果而不是连续结果，适用于因变量为二分类或多分类的问题中。一般逻辑回归函数中存在变量   ，表示该多分类问题属于某一类的可能性大小，当   处于不同区间（根据实际问题定义）时，因变量的分类输出结果随之变化。</p>
+<h2 id="3-2-逻辑回归模型"><a href="#3-2-逻辑回归模型" class="headerlink" title="3.2 逻辑回归模型"></a>3.2 逻辑回归模型</h2><p>逻辑回归模型来源于线性回归模型，所以逻辑回归函数中自变量仍为线性组合，而变量   的取值范围为[0,1]，与自变量的线性组合计算值取值区间不同，也不成直线关系。所以引入   扩大变量的取值范围，然后经验显示对   加以对数变换后的新变量   与自变量成线性关系（这是一个假设，真正的逻辑回归的定义只是引入了sigmoid函数），此即为logit函数或log-odds函数。<br>假设一个二分类问题，有   组数据样本，每组样本中有   个自变量，则由第   组数据建立的逻辑回归函数如式(3-1)。<br>其中   是   ，表示由第   组自变量   和未知参数   推断到的因变量   取1的可能性。经过变换可以得到   的表达式如式(3-2)。<br>其中   是sigmoid函数，又叫logistic函数，因此可以把该函数看作逻辑回归中的概率密度函数，函数图像如图3-1。</p>
+<p><img src="sigmoid.jpg" alt="sigmoid"></p>
+<p>图3-1 sigmoid函数图像<br>以下说明逻辑回归模型的建模步骤：<br>①       逻辑回归函数，计算样本因变量属于某一类别的可能性，如式(3-3)。<br>②       决策函数，确定给定样本的类型，如式(3-4)。<br>式(3-4)表示   处于某一区间，则决定了自变量所属的类别。其中区间界限值   可以根据实际情况自己定义。<br>③       决策边界，标识分类函数的分类边界，如式(3-5)。<br>式(3-5)表示当   等于区分类别的界限值时的函数方程，标识了两个分类之间的边界。<br>④       损失函数，表明估计值与真实值之间的差异，计算过程如下。<br>损失函数没有特定形式，仅仅表明预测值和真实值之间的差异大小。在线性回归中，损失函数是对所有数据样本的估计偏差求和平均。而在逻辑回归中，使用极大似然估计法来得到损失函数   。<br>式(3-6)表示服从二项分布的因变量   的概率分布函数，则现有   组数据样本，根据极大似然估计，该组数据样本的概率应该是最大，则可以得到如下似然函数   如式(3-7)。</p>
+<p>似然函数   是这些数据样本出现的概率，要使之最大，经过对数变换并乘以系数   后得到损失函数   ，如式(3-8)。<br>用矩阵表示：<br>此时就可以通过梯度下降法等方法计算损失函数   取最小值时的未知参数的取值。</p>
+<h2 id="3-3-参数估计方法"><a href="#3-3-参数估计方法" class="headerlink" title="3.3 参数估计方法"></a>3.3 参数估计方法</h2><h2 id="3-3-1-梯度下降法"><a href="#3-3-1-梯度下降法" class="headerlink" title="3.3.1 梯度下降法"></a>3.3.1 梯度下降法</h2><p>由2.3.2节的介绍可知梯度下降法的计算原理如式(3-1)。</p>
+<p>​                                                        </p>
+<p>损失函数如式(3-8)，梯度计算结果如式(3-10)。</p>
+<p>​                         </p>
+<p>​         用矩阵表示：   </p>
+<p>代入式(3-9)可得梯度下降法的计算公式如式(3-11)。</p>
+<p>​                                           </p>
+<p>为便于使用编程计算，上式采用矩阵形式表示如式(3-12)。</p>
+<p>​                                                    </p>
+<h2 id="3-4-逻辑回归模型的特点"><a href="#3-4-逻辑回归模型的特点" class="headerlink" title="3.4 逻辑回归模型的特点"></a>3.4 逻辑回归模型的特点</h2><p>逻辑回归模型主要适用于分类问题，可以处理自变量和因变量之间的各种关系，比线性回归应用更为广泛。它可以看到各个自变量的权重。</p>
+<p>但是需要较大的样本量以保证最大似然估计的精度，而且要求自变量之间不能有多重共线性。</p>
+<h2 id="3-5-过拟合问题"><a href="#3-5-过拟合问题" class="headerlink" title="3.5 过拟合问题"></a>3.5 过拟合问题</h2><p>过拟合即是过分拟合了训练数据，使得模型的复杂度提高，泛化能力较差（对未知数据的预测能力）。过拟合主要原因往往源自过多的特征。解决方法如下：</p>
+<p>①       减少特征数量（减少特征会失去一些信息，即使特征选的很好）</p>
+<p>• 可用人工选择要保留的特征；</p>
+<p>• 模型选择算法；</p>
+<p>但是有时候舍弃特征就等于是舍弃已有的有效数据，而且在特征较多时无法有效地选择舍弃那一部分特征。因此就需要第二种方法正则化。</p>
+<p>②       正则化（特征较多时比较有效）</p>
+<p>• 保留所有特征，但减少未知参数   的大小。</p>
+<p>正则化是结构风险最小化策略的实现，是在经验风险上加一个正则化项或惩罚项。正则化项一般是模型复杂度的单调递增函数，模型越复杂，正则化项就越大。正则项可以取不同的形式，在回归问题中取平方损失，就是参数的L2范数，也可以取L1范数。取平方损失时，模型的损失函数变为：</p>
+<p>​                                                   </p>
+<p>   是正则项系数：</p>
+<p>• 如果它的值很大，说明对模型的复杂度惩罚大，对拟合数据的损失惩罚小，这样它就不会过分拟合数据，在训练数据上的偏差较大，在未知数据上的方差较小，但是可能出现欠拟合的现象；</p>
+<p>• 如果它的值很小，说明比较注重对训练数据的拟合，在训练数据上的偏差会小，但是可能会导致过拟合。</p>
+<p>则正则化后的梯度下降法公式如式(3-14)。</p>
+<p>​                                         </p>
+<h2 id="回归分析的贝叶斯估计-Bayesian-Estimation-of-Regression-Analysis"><a href="#回归分析的贝叶斯估计-Bayesian-Estimation-of-Regression-Analysis" class="headerlink" title="回归分析的贝叶斯估计 (Bayesian Estimation of Regression Analysis)"></a><font size="5">回归分析的贝叶斯估计 (Bayesian Estimation of Regression Analysis)</font></h2><h2 id="1-极大似然估计法"><a href="#1-极大似然估计法" class="headerlink" title="1. 极大似然估计法"></a><font size="5">1. 极大似然估计法</font></h2><p>假设有一数据样本   ，包含   组数据，各组数据之间互不影响，每组数据中有   个统计独立的数据值，且设这些数据值是从概率密度分布函数   中随机抽取的。则根据极大似然估计的思想，观察到的样本   的联合概率应该取最大。基于以上假设，样本   的联合概率密度函数如式(4-1)。</p>
+<p>​                                             </p>
+<p>上式表示一个类条件概率密度函数（可能是一个人为定义），根据极大似然法可以估计未知参数   ，计算如式(4-2)。</p>
+<p>​                           </p>
+<p>l 极大似然估计的渐进无偏性：</p>
+<p>​                                                                        </p>
+<p>式(4-3)表示当样本组数趋于无穷时，各组样本数据通过极大似然法得到的未知参数估计值的均值就是未知参数的真实值，这就是极大似然估计的渐进无偏性，控制估计值的均值。</p>
+<p>l 极大似然估计的渐进一致性：</p>
+<p>​                                                                  </p>
+<p>式(4-4)表示当样本组数趋于无穷时，各组样本数据通过极大似然法得到的未知参数估计值与真实值之间的平方差的均值等于0，这就是极大似然估计的渐进一致性，控制估计值的方差。</p>
+<h2 id="4-2-最大后验估计法"><a href="#4-2-最大后验估计法" class="headerlink" title="4.2 最大后验估计法"></a>4.2 最大后验估计法</h2><p>最大后验估计法把未知参数   看作具有概率分布的随机变量，结合贝叶斯原理，由已知样本数据估计未知参数的后验概率分布，如式(4-5)。</p>
+<p>后验概率密度最大时对应的   就是最大后验法得到的未知参数估计值   ，计算如式(4-6)。</p>
+<p>最大后验估计法虽然和最大似然估计一样使用了点估计，但是考虑到了无法从训练数据中得到的先验知识，有助于减小最大后验点估计的方差，利用了贝叶斯方法的优点。</p>
+<h2 id="4-3-贝叶斯估计"><a href="#4-3-贝叶斯估计" class="headerlink" title="4.3 贝叶斯估计"></a>4.3 贝叶斯估计</h2><p>假设有一数据样本   ，且这些数据是从概率密度分布函数   独立抽取的，根据样本估计概率密度分布函数   。与频率学派将未知参数   看作未知的固定值并采用点估计不同，贝叶斯学派将未知参数   看作服从一定分布的随机变量，并使用概率密度函数来描述其在样本数据下的条件分布   ，计算同式(4-5)。</p>
+<p>与最大后验估计法不同，这里不是在   最大时取   的点估计，因此需要使用全概率公式将   展开，整理后如式(4-7)。</p>
+<p>​                                                          </p>
+<p>式(4-7)被称为贝叶斯公式的概率密度函数形式，其中   被称为边缘密度函数，   表示未知参数的先验概率，通过它可以把领域知识或者猜想等包含进来。   表示样本数据的似然（需要假设似然的形式，参数未知），随着样本数据的增多，这一项会降低先验概率对后验概率的影响，当有无限数据时，后验概率收敛到真实值附近，   计算如式(4-8)。</p>
+<p>​                                                                   </p>
+<p>根据样本估计的概率密度分布函数   的计算如式(4-9)，可以用于预测新的样本数据的概率分布。此时它不像最大似然估计和最大后验估计用单个   的点估计，而是考虑   的全分布，并用后验密度对不同的   取值进行加权。</p>
+<p>​        </p>
+<p>用于参数估计的贝叶斯估计分为三种，分别是最大后验估计、后验中位数估计、后验期望估计，须根据实际情况选取未知参数后验分布的对应值。</p>
+<h2 id="4-4-贝叶斯线性回归"><a href="#4-4-贝叶斯线性回归" class="headerlink" title="4.4 贝叶斯线性回归"></a>4.4 贝叶斯线性回归</h2><p>线性回归的回归函数如式(4-10)所示。</p>
+<p>​                                                                  </p>
+<p>假设随机误差   服从正态分布   ，引入新的未知参数   ，即在先验分布中利用贝叶斯估计得到未知参数   和   的后验概率分布，其后验概率如式(4-11)。</p>
+<p>​                                         </p>
+<p>其中似然函数   可由下式(4-12)简化变换。</p>
+<p>​                              </p>
+<p>由线性回归函数可知，先验概率   中未知参数   依赖于   ，所以可分解写成下式(4-13)。</p>
+<p>​                                                               </p>
+<p>在实际情况下，先验分布的选择往往是为了便于计算，而不是根据未知参数的实际分布情况选择的。因此通过选择合适的先验分布，使得先验分布和后验分布具有相同的分布函数形式，此时我们把这个先验分布成为似然函数的共轭先验分布，或称这个先验分布和后验分布共轭。</p>
+<p>这种形式的似然函数，引入未知参数估计值   ，经过变换可以写成下式(4-14)形式。</p>
+<p>​              </p>
+<p>根据似然函数的形式，共轭先验分布往往选择高斯-反伽马共轭模型，即假设   服从高斯分布，   服从反伽马分布。得到未知参数的联合分布函数如式(4-15)所示。</p>
+<p>​                          </p>
+<p>得到后验分布函数后，可通过不同方法对所求未知参数   进行估计推断。考虑最小均方差的估计被称为后验期望估计，如式(4-16)所示。此外还有最大后验估计和后验中位数估计等。</p>
+<p>​                                       </p>
+<p>由样本数据   求得了未知参数的后验分布，则基于后验分布还可以得到因变量   的概率分布，用于预测新数据   的分布，如式(4-17)所示。</p>
+<p>​                              </p>
+<h2 id="4-5-贝叶斯估计的特点"><a href="#4-5-贝叶斯估计的特点" class="headerlink" title="4.5 贝叶斯估计的特点"></a>4.5 贝叶斯估计的特点</h2><p>贝叶斯估计适用于样本数据有限的情况，或需要加入先验知识和专家知识的情况。它可以充分利用样本数据，全部样本数据都作为训练样本使用。而且贝叶斯估计将未知参数视为随机变量，在预测新数据时将后验分布作为加权积分，避免了过拟合（过拟合是指某些离散的数据在拟合中也被考虑，会影响拟合的效果，使得拟合过度。而贝叶斯中为样本数据加入了权重，可以防止过拟合）</p>
 
       
     </div>
@@ -481,14 +536,6 @@ p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/科研进展/" rel="tag"># 科研进展</a>
-          
-            <a href="/tags/数学基础/" rel="tag"># 数学基础</a>
-          
-        </div>
-      
 
       
       
@@ -498,8 +545,8 @@ p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/21/20190821-[英语] Reading-notes-of-Economist-magazine-Daily-English/" rel="next" title="Reading notes of 'Economist magazine' (Daily English)">
-                <i class="fa fa-chevron-left"></i> Reading notes of 'Economist magazine' (Daily English)
+              <a href="/2019/07/26/20190726-[科研] 多元自适应回归样条方法MARS及其应用/" rel="next" title="多元自适应回归样条方法MARS及其应用">
+                <i class="fa fa-chevron-left"></i> 多元自适应回归样条方法MARS及其应用
               </a>
             
           </div>
@@ -507,6 +554,10 @@ p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/03/20190803-[读书] 读书笔记之《沧浪之水》/" rel="prev" title="读书笔记之《沧浪之水》">
+                读书笔记之《沧浪之水》 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -666,7 +717,7 @@ p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-常用概率分布-Support-Vector-Machine"><span class="nav-text">1. 常用概率分布 ( Support Vector Machine )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-贝叶斯估计-Bayesian-Inference"><span class="nav-text">2. 贝叶斯估计 ( Bayesian Inference )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用概率与统计学概念"><span class="nav-text">- 常用概率与统计学概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-大数定理-Law-of-large-numbers"><span class="nav-text">1. 大数定理( Law of large numbers )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-中心极限定理-Law-of-large-numbers"><span class="nav-text">2. 中心极限定理( Law of large numbers )</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-概述-Abstract"><span class="nav-text">1. 概述 (Abstract)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-线性回归模型"><span class="nav-text">2. 线性回归模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-定-义"><span class="nav-text">2.1 定 义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-线性回归模型"><span class="nav-text">2.2 线性回归模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-参数估计方法"><span class="nav-text">2.3 参数估计方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-1-最小二乘法"><span class="nav-text">2.3.1 最小二乘法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-2-梯度下降法"><span class="nav-text">2.3.2 梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-3-参数估计的方法选择"><span class="nav-text">2.3.3 参数估计的方法选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-线性回归模型的特点"><span class="nav-text">2.4 线性回归模型的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-Feasure-Normalization-参数标准化"><span class="nav-text">2.5 Feasure Normalization(参数标准化)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-Regularized-Linear-Regression-Gradient"><span class="nav-text">2.6 Regularized Linear Regression Gradient</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-逻辑回归模型"><span class="nav-text">3 逻辑回归模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-定义"><span class="nav-text">3.1 定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-逻辑回归模型"><span class="nav-text">3.2 逻辑回归模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-参数估计方法"><span class="nav-text">3.3 参数估计方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-1-梯度下降法"><span class="nav-text">3.3.1 梯度下降法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-逻辑回归模型的特点"><span class="nav-text">3.4 逻辑回归模型的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-5-过拟合问题"><span class="nav-text">3.5 过拟合问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回归分析的贝叶斯估计-Bayesian-Estimation-of-Regression-Analysis"><span class="nav-text">回归分析的贝叶斯估计 (Bayesian Estimation of Regression Analysis)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-极大似然估计法"><span class="nav-text">1. 极大似然估计法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-最大后验估计法"><span class="nav-text">4.2 最大后验估计法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-贝叶斯估计"><span class="nav-text">4.3 贝叶斯估计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-贝叶斯线性回归"><span class="nav-text">4.4 贝叶斯线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-5-贝叶斯估计的特点"><span class="nav-text">4.5 贝叶斯估计的特点</span></a></li></ol></div>
             
 
           </div>
@@ -845,9 +896,9 @@ p_n=(X_1+\cdots+X_n)/n=\bar X_n</script></blockquote>
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/08/21/20190821-[科研] 概率论与数理统计学基础/';
-          this.page.identifier = '2019/08/21/20190821-[科研] 概率论与数理统计学基础/';
-          this.page.title = '概率论与数理统计学基础';
+          this.page.url = 'http://yoursite.com/2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/';
+          this.page.identifier = '2019/07/26/20190726-[科研] 回归分析算法详述及其贝叶斯估计/';
+          this.page.title = '回归分析算法详述及其贝叶斯估计';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://zz.disqus.com/embed.js';
