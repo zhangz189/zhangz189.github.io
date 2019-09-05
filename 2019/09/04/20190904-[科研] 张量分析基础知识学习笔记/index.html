@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="机器学习,科研进展,">
+  <meta name="keywords" content="科研进展,数学基础,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。">
-<meta name="keywords" content="机器学习,科研进展">
+<meta name="description" content="摘要：张量分析是">
+<meta name="keywords" content="科研进展,数学基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习基础算法综述">
-<meta property="og:url" content="http://yoursite.com/2019/07/26/20190726-[科研] 机器学习基础算法综述/index.html">
+<meta property="og:title" content="20190904-[科研] 张量分析基础知识学习笔记">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/index.html">
 <meta property="og:site_name" content="Paradise of Mind">
-<meta property="og:description" content="摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。">
+<meta property="og:description" content="摘要：张量分析是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-20T06:43:59.355Z">
+<meta property="og:updated_time" content="2019-09-04T03:24:30.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="机器学习基础算法综述">
-<meta name="twitter:description" content="摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。">
+<meta name="twitter:title" content="20190904-[科研] 张量分析基础知识学习笔记">
+<meta name="twitter:description" content="摘要：张量分析是">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/26/20190726-[科研] 机器学习基础算法综述/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/">
 
 
 
 
 
-  <title>机器学习基础算法综述 | Paradise of Mind</title>
+  <title>20190904-[科研] 张量分析基础知识学习笔记 | Paradise of Mind</title>
   
 
 
@@ -302,7 +302,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/20190726-[科研] 机器学习基础算法综述/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhengwen">
@@ -319,7 +319,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">机器学习基础算法综述</h1>
+          <h1 class="post-title" itemprop="name headline">20190904-[科研] 张量分析基础知识学习笔记</h1>
         
 
         <div class="post-meta">
@@ -331,8 +331,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-26T11:20:10+08:00">
-                2019-07-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-04T11:23:07+08:00">
+                2019-09-04
               </time>
             
 
@@ -347,16 +347,16 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-08-20T14:43:59+08:00">
-                2019-08-20
+              <time title="更新于" itemprop="dateModified" datetime="2019-09-04T11:24:30+08:00">
+                2019-09-04
               </time>
             
 			
 			
               <span class="post-updated">
               &nbsp; | &nbsp; 更新于
-              <time itemprop="dateUpdated" datetime="2019-08-20T14:43:59+08:00" content="2019-08-20">
-                2019-08-20
+              <time itemprop="dateUpdated" datetime="2019-09-04T11:24:30+08:00" content="2019-09-04">
+                2019-09-04
                </time>
               </span>
             
@@ -375,8 +375,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/数学/" itemprop="url" rel="index">
+                    <span itemprop="name">数学</span>
                   </a>
                 </span>
 
@@ -393,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/07/26/20190726-[科研] 机器学习基础算法综述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/26/20190726-[科研] 机器学习基础算法综述/" itemprop="commentCount"></span>
+                <a href="/2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  448 字
+                  744 字
                 </span>
               
 
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -453,15 +453,166 @@
       
 
       
-        <p>摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。</p>
+        <p>摘要：张量分析是</p>
 <a id="more"></a>
-<p>[TOC]</p>
-<h1 id="分类算法-Classification"><a href="#分类算法-Classification" class="headerlink" title="分类算法 ( Classification )"></a><font face="华文中宋" size="6" color="purple">分类算法 ( Classification )</font></h1><h2 id="逻辑回归-Logistic-Regression"><a href="#逻辑回归-Logistic-Regression" class="headerlink" title="逻辑回归( Logistic Regression )"></a><font face="华文中宋" size="5">逻辑回归( Logistic Regression )</font></h2><h2 id="支持向量机-Support-Vector-Machine"><a href="#支持向量机-Support-Vector-Machine" class="headerlink" title="支持向量机 ( Support Vector Machine )"></a><font face="华文中宋" size="5">支持向量机 ( Support Vector Machine )</font></h2><h2 id="贝叶斯估计-Bayesian-Inference"><a href="#贝叶斯估计-Bayesian-Inference" class="headerlink" title="贝叶斯估计 ( Bayesian Inference )"></a><font face="华文中宋" size="5">贝叶斯估计 ( Bayesian Inference )</font></h2><p>这是科学的一个重要方面，理论通过实验和模拟得到证实，做这些实验和验证这些理论的人越多，这些理论就越强大和可信。</p>
-<p><strong>Cromwell规则：</strong>如果一个人由等于零(我知道这些事件不是真的)或一(我知道这些事件是正确的)的先验概率开始，那无论向你展示什么证据，你的信念将不会被动摇。这在机器学习中是不可取的。</p>
-<p><strong>Bernstein-von Mises定理：</strong>当我们获得更多的数据时，我们的后验估计将渐进地独立于我们最初(先前)的信念——当然，前提是它遵循Cromwell规则。</p>
-<p>【怎样理解？】在频率论领域内，数据被认为是随机的，参数(如均值、方差)是固定的。在贝叶斯领域中，参数是随机的，数据是固定的。</p>
-<h2 id="期望最大化算法-Expection-Maximization"><a href="#期望最大化算法-Expection-Maximization" class="headerlink" title="期望最大化算法( Expection Maximization )"></a><font face="华文中宋" size="5">期望最大化算法( Expection Maximization )</font></h2><h2 id="马尔可夫链蒙特卡罗-Markov-chain-Monte-Carlo-MCMC"><a href="#马尔可夫链蒙特卡罗-Markov-chain-Monte-Carlo-MCMC" class="headerlink" title="马尔可夫链蒙特卡罗( Markov-chain Monte Carlo, MCMC )"></a><font face="华文中宋" size="5">马尔可夫链蒙特卡罗( Markov-chain Monte Carlo, MCMC )</font></h2><p> 重要性采样(Importance Sampling)</p>
-<h2 id="决策树-Decision-Tree"><a href="#决策树-Decision-Tree" class="headerlink" title="决策树( Decision Tree )"></a><font face="华文中宋" size="5">决策树( Decision Tree )</font></h2><h2 id="反向传播算法-Back-Propagation-BP"><a href="#反向传播算法-Back-Propagation-BP" class="headerlink" title="反向传播算法( Back Propagation, BP )"></a><font face="华文中宋" size="5">反向传播算法( Back Propagation, BP )</font></h2><h2 id="K近邻算法-K-Nearest-Neighbors-KNN"><a href="#K近邻算法-K-Nearest-Neighbors-KNN" class="headerlink" title="K近邻算法( K-Nearest Neighbors, KNN )"></a><font face="华文中宋" size="5">K近邻算法( K-Nearest Neighbors, KNN )</font></h2>
+<p>张量分析(Tensor Analysis)</p>
+<h1 id="1-Basic-concepts"><a href="#1-Basic-concepts" class="headerlink" title="1 Basic concepts"></a>1 Basic concepts</h1><p><strong>1.1</strong> <strong>标量积**</strong>(Scalar Product/ Dot Product/ Inner Product)**</p>
+<p><strong>1.2</strong> <strong>矢量积**</strong>(Vector Product/ Cross Product)**</p>
+<p>Not communtative or associative</p>
+<p><strong>1.3</strong> <strong>张量积或并矢**</strong>(Dyadic Product/ Tensorial Product)**</p>
+<p>​                                                  ,    is the symbol of dyadic operator.</p>
+<p><strong>1.4</strong> <strong>三重积**</strong>(Triple Products)**</p>
+<p>a.    </p>
+<p>b. 纯量三重积(Scalar Triple Product/ Box Product)，   。</p>
+<p>c. 向量三重积(Vector Triple Product)</p>
+<p><strong>1.5</strong> <strong>梯度**</strong>(Gradient)**</p>
+<p>Scalar filed    , and its gradient     is a  vector whose direction is normal to the surface of the surface    . Use chain rule to prove.</p>
+<p><strong>1.6</strong> <strong>散度**</strong>(Divergence)**</p>
+<p>Divergence is a scalar, the equation is    . </p>
+<p><strong>1.7</strong> <strong>旋度**</strong>(Curl)**</p>
+<p>Curl is the cross product of Hamilton operator and Vector <strong>V</strong>. The equation presented as below.</p>
+<h1 id="2-Relevant-Stipulation"><a href="#2-Relevant-Stipulation" class="headerlink" title="2 Relevant Stipulation"></a>2 Relevant Stipulation</h1><h1 id="2-1-Indicial-notation"><a href="#2-1-Indicial-notation" class="headerlink" title="2.1 Indicial notation"></a>2.1 Indicial notation</h1><p><strong>a.</strong> <strong>Free index</strong></p>
+<p><strong>Definition:</strong> If a subscript occurs precisely once in one term of an expression or equation, it is called a “free index”. This free index must occur precisely once in each term of the expression or equation.</p>
+<p>e.g.    , etc.</p>
+<p>The three components of a vector can be abbreviated to a single component with a generalized index. To be consistent, it’s necessary to use the same index i on both sides of the equation. </p>
+<p>The existence of one free index indicates that vectors are involved. And when two free indices appear, tensors are involved.</p>
+<p><strong>b.</strong> <strong>Dummy index</strong></p>
+<p><strong>Definition:</strong> If a subscript occurs precisely twice in one term of an expression or equation, it is called a “dummy index”. The dummy index may or may not occur precisely twice in any other term.</p>
+<p>e.g.    , etc.</p>
+<p>Whenever a subscript occurs twice in the same term, we can abberviate it to the dummy index. The index assumes all the possible values and summation which is called <em>Einstein Summation Covention.</em></p>
+<p><strong>c.</strong> <strong>Differentiation notation</strong></p>
+<p>A comma can be used to indicate differentiation.</p>
+<p>e.g.    ,    , etc.</p>
+<p><strong>d.</strong> <strong>Kronecker delta</strong>    </p>
+<p>The function of kronecker delta can be presented as   , so the application of    is to substitude the subscript. Hence, it’s called a subtitution operator.</p>
+<p>Expression:    </p>
+<p><strong>e.</strong> <strong>Alternating tensor</strong>    </p>
+<p>The definition is based on the even or odd number of permutations required to bring the indices to the natural order 1,2,3. If even, the value is 1. If odd, it is -1. If subscripts are repeated as in    , the value is zero.</p>
+<p><strong>Application:</strong>    ;    </p>
+<p>   , (special case    )         (Proof 1)</p>
+<p>   <strong>Identity:</strong>    </p>
+<p><strong>e.g.</strong>    </p>
+<p>​          (Proof 2)</p>
+<h1 id="2-2-Coordinates"><a href="#2-2-Coordinates" class="headerlink" title="2.2 Coordinates"></a>2.2 Coordinates</h1><p><strong>a.</strong> <strong>Transformation of Cartesian coordinates</strong></p>
+<p>   and   are two sets of right-handed Cartesian coordinate systems having the same origin.    represents    . Based on the definition of    , we can deduce that   .</p>
+<h1 id="2-3-Tensors"><a href="#2-3-Tensors" class="headerlink" title="2.3 Tensors"></a>2.3 Tensors</h1><p><strong>a.</strong> <strong>Dyad or Sceond-order tensor</strong></p>
+<p>Dyads are constructed by combining two vectors   . The transformation of dayds between primed and unprimed coordinates is given by    .</p>
+<p><strong>b.</strong> <strong>Higher order tensor</strong></p>
+<p>Tensors may be of any order. They also obey the general rule of transformation:    . All such tensors are called <em>Cartesian tensors</em>.</p>
+<p><strong>c.</strong> <strong>Properties of tensor</strong></p>
+<p><em>Tensor multiplication:</em>    ,         (Proof 3)</p>
+<p>Tensor multiplication yields a new tensor whose order is the sum of the orders of the original tensors.</p>
+<p><strong>Fig.1 Various Indicial Notation Operation</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Tensor</th>
+<th>Order</th>
+<th>Remarks</th>
+<th>Expansion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>d.</strong> <strong>Symmetrical tensor</strong></p>
+<p>Symmetrical tensor:    </p>
+<p>Skew-symmetric tensor:    </p>
+<p>Any second-order tensor can be uniquely decomposed into a sum of a symmetrical and skew-symmetrical tensor, that is    .</p>
+<p><strong>e.</strong> <strong>Isotropic tensor</strong></p>
+<p>Isotropic tensor means that its components have the same value in all coordinate systems. </p>
+<p>Zero-order: any scalar</p>
+<p>First-order: no nontrival vector</p>
+<p>Second-order: constant times             (Proof 4)</p>
+<p>Third-order: constant times              (Proof 5)   Why determinant must always be equal to +1?</p>
+<p>Fourth-order:    </p>
+<p>(Tips: Any even-order isotropic tensor has a form precisely analogous to the fourth-order case above. That is all possible combinations of    appear.)</p>
+<p><strong>f.</strong> <strong>Quotient**</strong>(<strong><strong>商</strong></strong>) rule**</p>
+<p>For any tensor   ,     is a scalar, then    is a tensor. </p>
+<p>It can be written in the following alternative form:     ,    ,    .</p>
+<p><strong>g.</strong> <strong>Divergence theorem</strong></p>
+<p>In order to combine the two integrals, it is necessary to be able to express a surface integral as a volume integral or vice versa. And <em>divergence theorem</em> states that the surface integral of the normal component of a vector U taken over a closed surface S is equal to the integral of the divergence of U taken over the volume V enclosed by the surface.</p>
+<p>Where N is the outward unit vector normal to the surface</p>
+
       
     </div>
     
@@ -478,9 +629,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
             <a href="/tags/科研进展/" rel="tag"># 科研进展</a>
+          
+            <a href="/tags/数学基础/" rel="tag"># 数学基础</a>
           
         </div>
       
@@ -493,8 +644,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/26/20190726-[科研] 概率论与数理统计学基础/" rel="next" title="概率论与数理统计学基础">
-                <i class="fa fa-chevron-left"></i> 概率论与数理统计学基础
+              <a href="/2019/08/21/20190821-[英语] Reading-notes-of-Economist-magazine-Daily-English/" rel="next" title="Reading notes of 'Economist magazine' (Daily English)">
+                <i class="fa fa-chevron-left"></i> Reading notes of 'Economist magazine' (Daily English)
               </a>
             
           </div>
@@ -502,10 +653,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/07/26/20190726-[科研] 机器学习算法基本原则及其优化方法/" rel="prev" title="机器学习算法基本原则及其优化方法">
-                机器学习算法基本原则及其优化方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -665,7 +812,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分类算法-Classification"><span class="nav-text">分类算法 ( Classification )</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑回归-Logistic-Regression"><span class="nav-text">逻辑回归( Logistic Regression )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#支持向量机-Support-Vector-Machine"><span class="nav-text">支持向量机 ( Support Vector Machine )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贝叶斯估计-Bayesian-Inference"><span class="nav-text">贝叶斯估计 ( Bayesian Inference )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#期望最大化算法-Expection-Maximization"><span class="nav-text">期望最大化算法( Expection Maximization )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马尔可夫链蒙特卡罗-Markov-chain-Monte-Carlo-MCMC"><span class="nav-text">马尔可夫链蒙特卡罗( Markov-chain Monte Carlo, MCMC )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树-Decision-Tree"><span class="nav-text">决策树( Decision Tree )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向传播算法-Back-Propagation-BP"><span class="nav-text">反向传播算法( Back Propagation, BP )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K近邻算法-K-Nearest-Neighbors-KNN"><span class="nav-text">K近邻算法( K-Nearest Neighbors, KNN )</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-Basic-concepts"><span class="nav-text">1 Basic concepts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Relevant-Stipulation"><span class="nav-text">2 Relevant Stipulation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-1-Indicial-notation"><span class="nav-text">2.1 Indicial notation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-2-Coordinates"><span class="nav-text">2.2 Coordinates</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-3-Tensors"><span class="nav-text">2.3 Tensors</span></a></li></ol></div>
             
 
           </div>
@@ -844,9 +991,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2019/07/26/20190726-[科研] 机器学习基础算法综述/';
-          this.page.identifier = '2019/07/26/20190726-[科研] 机器学习基础算法综述/';
-          this.page.title = '机器学习基础算法综述';
+          this.page.url = 'http://yoursite.com/2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/';
+          this.page.identifier = '2019/09/04/20190904-[科研] 张量分析基础知识学习笔记/';
+          this.page.title = '20190904-[科研] 张量分析基础知识学习笔记';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://zz.disqus.com/embed.js';
