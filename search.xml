@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[20190904-[科研] 张量分析基础知识学习笔记]]></title>
+    <title><![CDATA[读书笔记——《明朝那些事儿》]]></title>
+    <url>%2F2019%2F09%2F06%2F20190906-%5B%E8%AF%BB%E4%B9%A6%5D%20%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E4%B9%8B%E3%80%8A%E6%98%8E%E6%9C%9D%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%E3%80%8B%2F</url>
+    <content type="text"><![CDATA[摘要：《明朝那些事儿》 人物关系汤和 郭子兴 冯国胜（冯胜） 冯国用 李善长]]></content>
+      <categories>
+        <category>读书</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+        <tag>生活随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[张量分析基础知识学习笔记]]></title>
     <url>%2F2019%2F09%2F04%2F20190904-%5B%E7%A7%91%E7%A0%94%5D%20%E5%BC%A0%E9%87%8F%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
     <content type="text"><![CDATA[摘要：张量分析是 张量分析(Tensor Analysis) 1 Basic concepts1.1 标量积**(Scalar Product/ Dot Product/ Inner Product)** 1.2 矢量积**(Vector Product/ Cross Product)** Not communtative or associative 1.3 张量积或并矢**(Dyadic Product/ Tensorial Product)** ​ , is the symbol of dyadic operator. 1.4 三重积**(Triple Products)** a. b. 纯量三重积(Scalar Triple Product/ Box Product)， 。 c. 向量三重积(Vector Triple Product) 1.5 梯度**(Gradient)** Scalar filed , and its gradient is a vector whose direction is normal to the surface of the surface . Use chain rule to prove. 1.6 散度**(Divergence)** Divergence is a scalar, the equation is . 1.7 旋度**(Curl)** Curl is the cross product of Hamilton operator and Vector V. The equation presented as below. 2 Relevant Stipulation2.1 Indicial notationa. Free index Definition: If a subscript occurs precisely once in one term of an expression or equation, it is called a “free index”. This free index must occur precisely once in each term of the expression or equation. e.g. , etc. The three components of a vector can be abbreviated to a single component with a generalized index. To be consistent, it’s necessary to use the same index i on both sides of the equation. The existence of one free index indicates that vectors are involved. And when two free indices appear, tensors are involved. b. Dummy index Definition: If a subscript occurs precisely twice in one term of an expression or equation, it is called a “dummy index”. The dummy index may or may not occur precisely twice in any other term. e.g. , etc. Whenever a subscript occurs twice in the same term, we can abberviate it to the dummy index. The index assumes all the possible values and summation which is called Einstein Summation Covention. c. Differentiation notation A comma can be used to indicate differentiation. e.g. , , etc. d. Kronecker delta The function of kronecker delta can be presented as , so the application of is to substitude the subscript. Hence, it’s called a subtitution operator. Expression: e. Alternating tensor The definition is based on the even or odd number of permutations required to bring the indices to the natural order 1,2,3. If even, the value is 1. If odd, it is -1. If subscripts are repeated as in , the value is zero. Application: ; , (special case ) (Proof 1) Identity: e.g. ​ (Proof 2) 2.2 Coordinatesa. Transformation of Cartesian coordinates and are two sets of right-handed Cartesian coordinate systems having the same origin. represents . Based on the definition of , we can deduce that . 2.3 Tensorsa. Dyad or Sceond-order tensor Dyads are constructed by combining two vectors . The transformation of dayds between primed and unprimed coordinates is given by . b. Higher order tensor Tensors may be of any order. They also obey the general rule of transformation: . All such tensors are called Cartesian tensors. c. Properties of tensor Tensor multiplication: , (Proof 3) Tensor multiplication yields a new tensor whose order is the sum of the orders of the original tensors. Fig.1 Various Indicial Notation Operation Tensor Order Remarks Expansion d. Symmetrical tensor Symmetrical tensor: Skew-symmetric tensor: Any second-order tensor can be uniquely decomposed into a sum of a symmetrical and skew-symmetrical tensor, that is . e. Isotropic tensor Isotropic tensor means that its components have the same value in all coordinate systems. Zero-order: any scalar First-order: no nontrival vector Second-order: constant times (Proof 4) Third-order: constant times (Proof 5) Why determinant must always be equal to +1? Fourth-order: (Tips: Any even-order isotropic tensor has a form precisely analogous to the fourth-order case above. That is all possible combinations of appear.) f. Quotient**(商) rule** For any tensor , is a scalar, then is a tensor. It can be written in the following alternative form: , , . g. Divergence theorem In order to combine the two integrals, it is necessary to be able to express a surface integral as a volume integral or vice versa. And divergence theorem states that the surface integral of the normal component of a vector U taken over a closed surface S is equal to the integral of the divergence of U taken over the volume V enclosed by the surface. Where N is the outward unit vector normal to the surface]]></content>
       <categories>
@@ -105,8 +117,8 @@
       </categories>
       <tags>
         <tag>经验教程</tag>
-        <tag>网络技术</tag>
         <tag>VPS</tag>
+        <tag>网络技术</tag>
       </tags>
   </entry>
   <entry>
@@ -151,18 +163,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[机器学习基础算法综述]]></title>
-    <url>%2F2019%2F07%2F26%2F20190726-%5B%E7%A7%91%E7%A0%94%5D%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%BB%BC%E8%BF%B0%2F</url>
-    <content type="text"><![CDATA[摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。 [TOC] 分类算法 ( Classification )逻辑回归( Logistic Regression )支持向量机 ( Support Vector Machine )贝叶斯估计 ( Bayesian Inference )这是科学的一个重要方面，理论通过实验和模拟得到证实，做这些实验和验证这些理论的人越多，这些理论就越强大和可信。 Cromwell规则：如果一个人由等于零(我知道这些事件不是真的)或一(我知道这些事件是正确的)的先验概率开始，那无论向你展示什么证据，你的信念将不会被动摇。这在机器学习中是不可取的。 Bernstein-von Mises定理：当我们获得更多的数据时，我们的后验估计将渐进地独立于我们最初(先前)的信念——当然，前提是它遵循Cromwell规则。 【怎样理解？】在频率论领域内，数据被认为是随机的，参数(如均值、方差)是固定的。在贝叶斯领域中，参数是随机的，数据是固定的。 期望最大化算法( Expection Maximization )马尔可夫链蒙特卡罗( Markov-chain Monte Carlo, MCMC ) 重要性采样(Importance Sampling) 决策树( Decision Tree )反向传播算法( Back Propagation, BP )K近邻算法( K-Nearest Neighbors, KNN )]]></content>
-      <categories>
-        <category>算法</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>科研进展</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[概率论与数理统计学基础]]></title>
     <url>%2F2019%2F07%2F26%2F20190726-%5B%E7%A7%91%E7%A0%94%5D%20%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%9F%BA%E7%A1%80%2F</url>
     <content type="text"><![CDATA[摘要：人工智能和大数据热潮的背后，必须要有强有力的数学基础作为支撑。一切数据分析和机器学习的根本还是对于数学原理的应用和转化。而概率论与数理统计学正式直接和机器学习相关的一部分，对于掌握和了解机器学习算法具有重要意义。 [TOC] 常用概率分布 ( Support Vector Machine )离散型概率分布正态分布 / 高斯分布( Normal distribution / Guassian distribution )泊松分布( Poisson distribution ) Definition：若随机变量 $X$ 的可能取值为0，1，2，···，且概率分布服从： P(X=i)=\mathrm{e}^{-\lambda} \lambda^{i} / i ! (i=0,1,\cdots)则称 $X$ 服从泊松分布，记为 $X \sim P(\lambda)$ ，$\lambda$ 为大于0的常数。 Application： 离散型概率分布正态分布 / 高斯分布( Normal distribution / Guassian distribution )瑞利分布( Rayleigh distribution )贝叶斯估计 ( Bayesian Inference )&emsp;&emsp;这是科学的一个重要方面，理论通过实验和模拟得到证实，做这些实验和验证这些理论的人越多，这些理论就越强大和可信。 Cromwell规则：如果一个人由等于零(我知道这些事件不是真的)或一(我知道这些事件是正确的)的先验概率开始，那无论向你展示什么证据，你的信念将不会被动摇。这在机器学习中是不可取的。 Bernstein-von Mises定理：当我们获得更多的数据时，我们的后验估计将渐进地独立于我们最初(先前)的信念——当然，前提是它遵循Cromwell规则。 【怎样理解？】在频率论领域内，数据被认为是随机的，参数(如均值、方差)是固定的。在贝叶斯领域中，参数是随机的，数据是固定的。 - 常用概率与统计学概念常用统计特征值( Statistical characteristics )描述随机变量分布特征的一些常数，最典型的是描述随机分布的平均值和散布度的数字特征，如： 数学期望（均值）： Definition：对离散型随机变量 $X$ 取无穷个可能值 $a_{1}, a_{2}, \cdots$ ，对应的概率分布为 $P\left(X=a_{i}\right)=p_{i},$$ i=1,2， \cdots$ ，则数学期望为： E(X)=对连续型随机变量 $X$ Characteristic： 中位数： 方差： 矩： 变异系数： 对于多维变量而言，还有考虑各分量之间相互关系的数字特征，如： 协方差： 相关系数： 大数定理( Law of large numbers ) 由概率的统计定义”频率收敛于概率“引申而来，设做$n$次独立试验，每次事件$A$发生的结果记为随机变量$X_i(i=1,\cdots,n)$，则事件$A$发生的频率为 p_n=(X_1+\cdots+X_n)/n=\bar X_n 中心极限定理( Law of large numbers ) 概率论中，习惯于将和的分布收敛于正态分布的这一类定理都叫做“中心极限定理”。]]></content>
@@ -172,6 +172,18 @@
       <tags>
         <tag>科研进展</tag>
         <tag>数学基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[机器学习基础算法综述]]></title>
+    <url>%2F2019%2F07%2F26%2F20190726-%5B%E7%A7%91%E7%A0%94%5D%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%BB%BC%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[摘要：信息和智能化时代已经到来，随之产生了大量的用于数据分析和智能决策的机器学习算法，这些算法在不同的具体场景下具有各自的特点和优势。在传统行业的互联网+过程中，学习一些经典的机器学习算法，深入了解其中的数学原理和思想是非常必要的，此处记录学习《机器学习》和《统计学习方法》这两本书的过程中的算法要点和思路。 [TOC] 分类算法 ( Classification )逻辑回归( Logistic Regression )支持向量机 ( Support Vector Machine )贝叶斯估计 ( Bayesian Inference )这是科学的一个重要方面，理论通过实验和模拟得到证实，做这些实验和验证这些理论的人越多，这些理论就越强大和可信。 Cromwell规则：如果一个人由等于零(我知道这些事件不是真的)或一(我知道这些事件是正确的)的先验概率开始，那无论向你展示什么证据，你的信念将不会被动摇。这在机器学习中是不可取的。 Bernstein-von Mises定理：当我们获得更多的数据时，我们的后验估计将渐进地独立于我们最初(先前)的信念——当然，前提是它遵循Cromwell规则。 【怎样理解？】在频率论领域内，数据被认为是随机的，参数(如均值、方差)是固定的。在贝叶斯领域中，参数是随机的，数据是固定的。 期望最大化算法( Expection Maximization )马尔可夫链蒙特卡罗( Markov-chain Monte Carlo, MCMC ) 重要性采样(Importance Sampling) 决策树( Decision Tree )反向传播算法( Back Propagation, BP )K近邻算法( K-Nearest Neighbors, KNN )]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>科研进展</tag>
       </tags>
   </entry>
   <entry>
