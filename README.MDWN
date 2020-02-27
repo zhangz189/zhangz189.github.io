@@ -1,1 +1,1 @@
-朋友你好，这里是我的自建博客相关文件。
+Hi, welcome to here. There are some files for my personal blog which is attached to github pages.
